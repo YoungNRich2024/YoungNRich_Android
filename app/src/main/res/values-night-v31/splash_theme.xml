@@ -3,7 +3,7 @@
 
     <style name="Theme.AppSplash" parent="Theme.SplashScreen">
         <item name="windowSplashScreenBackground">@color/dark_primary</item>
-        <item name="windowSplashScreenAnimationDuration">1400</item>
+        <item name="windowSplashScreenAnimationDuration">1000</item>
         <item name="postSplashScreenTheme">@style/Theme.YoungNRich</item>
 
         <!-- Status bar and Nav bar configs -->

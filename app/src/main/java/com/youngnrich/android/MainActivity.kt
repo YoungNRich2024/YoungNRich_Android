@@ -42,6 +42,6 @@ class MainActivity : AppCompatActivity() {
     }
 
     companion object {
-        private const val SPLASH_DELAY = 1600L
+        private const val SPLASH_DELAY = 2000L
     }
 }
