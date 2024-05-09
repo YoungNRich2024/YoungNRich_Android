@@ -1,5 +1,6 @@
 package com.youngnrich.android
 
+import android.content.Intent
 import android.os.Bundle
 import android.os.Handler
 import android.os.Looper
@@ -38,10 +39,13 @@ class MainActivity : AppCompatActivity() {
         splashScreen.setKeepOnScreenCondition { keepSplash }
         Handler(Looper.getMainLooper()).postDelayed({
             keepSplash = false
+
+            val startLoginActivityIntent = Intent(this, LoginActivity::class.java)
+            startActivity(startLoginActivityIntent)
         }, SPLASH_DELAY)
     }
 
     companion object {
-        private const val SPLASH_DELAY = 2000L
+        private const val SPLASH_DELAY = 1200L
     }
 }
