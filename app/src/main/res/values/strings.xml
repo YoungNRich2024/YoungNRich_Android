@@ -2,4 +2,9 @@
     <string name="app_name">영앤리치</string>
     <string name="kakao_login">카카오 로그인</string>
     <string name="youngnrich_launcher_icon">영앤리치 런처 아이콘</string>
+    <string name="new_game">새 게임</string>
+    <string name="existing_game">이어하기</string>
+    <string name="my_page">마이페이지</string>
+    <string name="ranking">랭킹</string>
+    <string name="game_info">게임 정보</string>
 </resources>
