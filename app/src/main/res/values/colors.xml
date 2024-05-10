@@ -6,4 +6,12 @@
     <!-- 임시로 일단 정해둔 색상들 -->
     <color name="light_primary">#FFD700</color>
     <color name="dark_primary">#00462A</color>
+
+    <!-- 공식 색상들 -->
+    <color name="dark_blue">#01121A</color>
+    <color name="gold_1">#FEFFF4</color>
+    <color name="gold_2">#E8B88B</color>
+    <color name="gold_3">#AF6A42</color>
+    <color name="gold_4">#8F563A</color>
+    <color name="kakao_yellow">#FEE500</color>
 </resources>
