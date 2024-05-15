@@ -7,4 +7,18 @@
     <string name="my_page">마이페이지</string>
     <string name="ranking">랭킹</string>
     <string name="game_info">게임 정보</string>
+
+    <string name="intro_0">당신은 위대한 경제학자이자 투자자인\n알렉산더 밀턴의 직계 후손입니다.</string>
+    <string name="intro_1">당신의 가문에는,\n알렉산더가 주식 투자로 벌어들인\n막대한 양의 재산을\n비밀 사무실의 금고 안에 보관하였다는\n전설이 전해져 내려옵니다.</string>
+    <string name="intro_2">비밀 사무실의 위치는 아무도 알지 못합니다.</string>
+    <string name="intro_3">하지만 넘치는 호기심과 야무진 집념을 가지고 있는 당신은 할아버지께서 가장 아끼는 손주였죠.</string>
+    <string name="intro_4">그래서 당신은 가족 중에,\n아니 아마 전세계에서 그 위치를 알고 있는\n유일한 사람일 겁니다…!</string>
+    <string name="intro_5">수많은 시행착오 끝에 마침내,\n할아버지의 오래된 사무실에 도착했습니다.</string>
+    <string name="intro_6">방에 들어간 순간,\n방문이 신비한 힘으로 인해 잠기고 맙니다.</string>
+    <string name="intro_7">이제 당신은 금고를 열어,\n그 안에 무엇이 있는지 확인해야만\n방에서 나갈 수 있습니다.</string>
+    <string name="intro_8">이 과정에서 당신은\n주식 시장의 작동 원리를 파악하고,\n할아버지의 투자 철학을 이해해야만 합니다.</string>
+    <string name="skip_button">skip button</string>
+    <string name="prev_button">go-to-previous button</string>
+    <string name="next_button">go-to-next button</string>
+    <string name="game_button">go-to-game button</string>
 </resources>

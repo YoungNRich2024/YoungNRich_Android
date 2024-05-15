@@ -13,6 +13,16 @@
         android:theme="@style/Theme.YoungNRich"
         tools:targetApi="31">
         <activity
+            android:name=".FirstRoomGameActivity"
+            android:exported="false" />
+        <activity
+            android:name=".IntroActivity"
+            android:exported="false"
+            android:screenOrientation="landscape" />
+        <activity
+            android:name=".BaseGameActivity"
+            android:exported="false" />
+        <activity
             android:name=".HomeActivity"
             android:exported="false" />
         <activity

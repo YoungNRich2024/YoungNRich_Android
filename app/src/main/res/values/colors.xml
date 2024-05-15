@@ -14,4 +14,7 @@
     <color name="gold_3">#AF6A42</color>
     <color name="gold_4">#8F563A</color>
     <color name="kakao_yellow">#FEE500</color>
+
+    <color name="intro_white">#FFFDE8</color>
+    <color name="transparency">#00000000</color>
 </resources>
