@@ -1,0 +1,185 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:id="@+id/inventory"
+    android:layout_width="wrap_content"
+    android:layout_height="match_parent"
+    app:layout_constraintBottom_toBottomOf="parent"
+    app:layout_constraintEnd_toEndOf="parent"
+    app:layout_constraintTop_toTopOf="parent">
+
+    <ImageView
+        android:layout_width="wrap_content"
+        android:layout_height="match_parent"
+        android:adjustViewBounds="true"
+        android:src="@drawable/inventory_background"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <LinearLayout
+        android:layout_width="0dp"
+        android:layout_height="0dp"
+        android:layout_marginTop="12dp"
+        android:layout_marginBottom="20dp"
+        android:gravity="center"
+        android:orientation="vertical"
+        app:layout_constraintBottom_toTopOf="@id/zoomImageButton"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent">
+
+        <FrameLayout
+            android:id="@+id/slot0"
+            android:layout_width="40dp"
+            android:layout_height="40dp"
+            android:layout_weight="1">
+            <ImageButton
+                android:id="@+id/slot0ImageButton"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:padding="0dp"
+                android:scaleType="centerInside"
+                android:src="@drawable/inventory_slot"
+                android:contentDescription="@string/slot_0" />
+            <ImageView
+                android:id="@+id/slot0ImageView"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:src="@color/transparency"
+                android:scaleType="centerInside"
+                android:background="@color/transparency"
+                android:padding="1dp"/>
+        </FrameLayout>
+
+        <FrameLayout
+            android:id="@+id/slot1"
+            android:layout_width="40dp"
+            android:layout_height="40dp"
+            android:layout_weight="1">
+            <ImageButton
+                android:id="@+id/slot1ImageButton"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:padding="0dp"
+                android:scaleType="centerInside"
+                android:src="@drawable/inventory_slot"
+                android:contentDescription="@string/slot_1" />
+            <ImageView
+                android:id="@+id/slot1ImageView"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:src="@color/transparency"
+                android:scaleType="centerInside"
+                android:background="@color/transparency"
+                android:padding="1dp"/>
+        </FrameLayout>
+
+        <FrameLayout
+            android:id="@+id/slot2"
+            android:layout_width="40dp"
+            android:layout_height="40dp"
+            android:layout_weight="1">
+            <ImageButton
+                android:id="@+id/slot2ImageButton"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:padding="0dp"
+                android:scaleType="centerInside"
+                android:src="@drawable/inventory_slot"
+                android:contentDescription="@string/slot_2" />
+            <ImageView
+                android:id="@+id/slot2ImageView"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:src="@color/transparency"
+                android:scaleType="centerInside"
+                android:background="@color/transparency"
+                android:padding="1dp"/>
+        </FrameLayout>
+
+        <FrameLayout
+            android:id="@+id/slot3"
+            android:layout_width="40dp"
+            android:layout_height="40dp"
+            android:layout_weight="1">
+            <ImageButton
+                android:id="@+id/slot3ImageButton"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:padding="0dp"
+                android:scaleType="centerInside"
+                android:src="@drawable/inventory_slot"
+                android:contentDescription="@string/slot_3" />
+            <ImageView
+                android:id="@+id/slot3ImageView"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:src="@color/transparency"
+                android:scaleType="centerInside"
+                android:background="@color/transparency"
+                android:padding="1dp"/>
+        </FrameLayout>
+
+        <FrameLayout
+            android:id="@+id/slot4"
+            android:layout_width="40dp"
+            android:layout_height="40dp"
+            android:layout_weight="1">
+            <ImageButton
+                android:id="@+id/slot4ImageButton"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:padding="0dp"
+                android:scaleType="centerInside"
+                android:src="@drawable/inventory_slot"
+                android:contentDescription="@string/slot_4" />
+            <ImageView
+                android:id="@+id/slot4ImageView"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:src="@color/transparency"
+                android:scaleType="centerInside"
+                android:background="@color/transparency"
+                android:padding="1dp"/>
+        </FrameLayout>
+
+        <FrameLayout
+            android:id="@+id/slot5"
+            android:layout_width="40dp"
+            android:layout_height="40dp"
+            android:layout_weight="1">
+            <ImageButton
+                android:id="@+id/slot5ImageButton"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:padding="0dp"
+                android:scaleType="centerInside"
+                android:src="@drawable/inventory_slot"
+                android:contentDescription="@string/slot_5" />
+            <ImageView
+                android:id="@+id/slot5ImageView"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:src="@color/transparency"
+                android:scaleType="centerInside"
+                android:background="@color/transparency"
+                android:padding="1dp"/>
+        </FrameLayout>
+    </LinearLayout>
+
+    <ImageButton
+        android:id="@+id/zoomImageButton"
+        android:layout_width="43dp"
+        android:layout_height="43dp"
+        android:layout_marginBottom="12dp"
+        android:layout_weight="1"
+        android:contentDescription="@string/zoom_button"
+        android:padding="0dp"
+        android:scaleType="centerInside"
+        android:src="@drawable/zoom_button"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent" />
+</androidx.constraintlayout.widget.ConstraintLayout>

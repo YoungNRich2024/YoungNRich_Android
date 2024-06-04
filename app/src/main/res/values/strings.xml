@@ -17,6 +17,13 @@
     <string name="intro_6">방에 들어간 순간,\n방문이 신비한 힘으로 인해 잠기고 맙니다.</string>
     <string name="intro_7">이제 당신은 금고를 열어,\n그 안에 무엇이 있는지 확인해야만\n방에서 나갈 수 있습니다.</string>
     <string name="intro_8">이 과정에서 당신은\n주식 시장의 작동 원리를 파악하고,\n할아버지의 투자 철학을 이해해야만 합니다.</string>
+    <string name="slot_0">slot 0</string>
+    <string name="slot_1">slot 1</string>
+    <string name="slot_2">slot 2</string>
+    <string name="slot_3">slot 3</string>
+    <string name="slot_4">slot 4</string>
+    <string name="slot_5">slot 5</string>
+    <string name="zoom_button">zoom button</string>
     <string name="skip_button">skip button</string>
     <string name="prev_button">go-to-previous button</string>
     <string name="next_button">go-to-next button</string>
