@@ -1,0 +1,68 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="wrap_content"
+    android:layout_height="wrap_content"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools">
+
+    <ImageView
+        android:id="@+id/commonDialogBackgroundImageView"
+        android:layout_width="540dp"
+        android:layout_height="wrap_content"
+        android:src="@drawable/common_dialog"
+        android:contentDescription="@string/common_dialog"
+        android:adjustViewBounds="true"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintBottom_toBottomOf="parent" />
+
+    <TextView
+        android:id="@+id/commonDialogTextView"
+        android:layout_width="0dp"
+        android:layout_height="0dp"
+        app:layout_constraintStart_toStartOf="@id/commonDialogBackgroundImageView"
+        app:layout_constraintEnd_toEndOf="@id/commonDialogBackgroundImageView"
+        app:layout_constraintTop_toTopOf="@id/commonDialogBackgroundImageView"
+        app:layout_constraintBottom_toBottomOf="@id/commonDialogBackgroundImageView"
+        android:maxLines="3"
+        tools:text="다이얼로그의 테스트 멘트 입니다. 다이얼로그의 테스트 멘트 입니다. 다이얼로그의 테스트 멘트 입니다. 다이얼로그의 테스트 멘트 입니다. 다이얼로그의 테스트 멘트 입니다. 다이얼로그의 테스트 멘트 입니다. 다이얼로그의 테스트 멘트 입니다."
+        android:ellipsize="end"
+        android:textSize="16sp"
+        android:gravity="center"
+        android:layout_marginHorizontal="32dp"
+        android:layout_marginVertical="30dp" />
+
+    <ImageButton
+        android:id="@+id/nextDialogImageButton"
+        android:layout_width="56dp"
+        android:layout_height="wrap_content"
+        android:src="@drawable/next_button_black"
+        android:background="@color/transparency"
+        android:adjustViewBounds="true"
+        android:scaleType="fitCenter"
+        app:layout_constraintEnd_toEndOf="@id/commonDialogBackgroundImageView"
+        app:layout_constraintBottom_toBottomOf="@id/commonDialogBackgroundImageView"
+        android:layout_marginBottom="12dp"
+        android:layout_marginEnd="12dp"
+        android:contentDescription="@string/next_dialog_button" />
+
+    <FrameLayout
+        android:layout_width="36dp"
+        android:layout_height="36dp"
+        app:layout_constraintEnd_toEndOf="@id/commonDialogBackgroundImageView"
+        app:layout_constraintTop_toTopOf="@id/commonDialogBackgroundImageView">
+        <Button
+            android:id="@+id/closeDialogButton"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:background="@color/transparency" />
+        <ImageView
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:src="@drawable/close_button"
+            android:layout_margin="12dp"
+            android:contentDescription="@string/close_button" />
+    </FrameLayout>
+
+</androidx.constraintlayout.widget.ConstraintLayout>
