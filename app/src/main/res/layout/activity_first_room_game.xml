@@ -1,0 +1,109 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/main"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".FirstRoomGameActivity">
+
+    <include layout="@layout/layout_base_inventory"
+        android:id="@+id/first_room_inventory"
+        android:layout_width="wrap_content"
+        android:layout_height="match_parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent" />
+
+    <FrameLayout
+        android:layout_width="0dp"
+        android:layout_height="match_parent"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toStartOf="@id/first_room_inventory"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        android:background="@color/dark_blue">
+
+        <HorizontalScrollView
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent">
+
+            <RelativeLayout
+                android:layout_width="wrap_content"
+                android:layout_height="match_parent"
+                android:layout_gravity="center">
+
+                <ImageView
+                    android:id="@+id/roomBackgroundImageView"
+                    android:layout_width="wrap_content"
+                    android:layout_height="match_parent"
+                    android:adjustViewBounds="true"
+                    android:contentDescription="@string/first_room_background"
+                    android:scaleType="fitCenter"
+                    android:src="@drawable/first_room_background" />
+
+                <ImageButton
+                    android:id="@+id/televisionImageButton"
+                    android:layout_width="wrap_content"
+                    android:layout_height="240dp"
+                    android:layout_alignTop="@id/roomBackgroundImageView"
+                    android:layout_alignEnd="@id/roomBackgroundImageView"
+                    android:layout_marginTop="160dp"
+                    android:layout_marginEnd="68dp"
+                    android:adjustViewBounds="true"
+                    android:background="@color/transparency"
+                    android:contentDescription="@string/television_on"
+                    android:scaleType="fitCenter"
+                    android:src="@drawable/television_on" />
+
+                <ImageButton
+                    android:id="@+id/ipadImageButton"
+                    android:layout_width="95dp"
+                    android:layout_height="wrap_content"
+                    android:layout_alignStart="@id/roomBackgroundImageView"
+                    android:layout_alignBottom="@id/roomBackgroundImageView"
+                    android:layout_marginStart="95dp"
+                    android:layout_marginBottom="40dp"
+                    android:adjustViewBounds="true"
+                    android:background="@color/transparency"
+                    android:contentDescription="@string/ipad"
+                    android:scaleType="fitCenter"
+                    android:src="@drawable/ipad" />
+
+                <ImageButton
+                    android:id="@+id/pillowImageView"
+                    android:layout_width="80dp"
+                    android:layout_height="48dp"
+                    android:layout_alignTop="@id/roomBackgroundImageView"
+                    android:layout_alignEnd="@id/roomBackgroundImageView"
+                    android:layout_marginTop="135dp"
+                    android:layout_marginEnd="240dp"
+                    android:padding="0dp"
+                    android:background="@color/transparency"
+                    android:contentDescription="@string/pillow"
+                    android:src="@color/transparency_indicator" />
+
+                <ImageView
+                    android:id="@+id/pictureFrameImageView"
+                    android:layout_width="80dp"
+                    android:layout_height="60dp"
+                    android:layout_alignTop="@id/roomBackgroundImageView"
+                    android:layout_alignEnd="@id/roomBackgroundImageView"
+                    android:layout_marginTop="24dp"
+                    android:layout_marginEnd="80dp"
+                    android:contentDescription="@string/picture_frame"
+                    android:src="@color/transparency_indicator" />
+            </RelativeLayout>
+        </HorizontalScrollView>
+    </FrameLayout>
+
+    <androidx.fragment.app.FragmentContainerView
+        android:id="@+id/fragment_container_view"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent" />
+
+</androidx.constraintlayout.widget.ConstraintLayout>

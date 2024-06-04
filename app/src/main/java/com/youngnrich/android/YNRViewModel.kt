@@ -12,12 +12,19 @@ private val intros = listOf(
 )
 
 class YNRViewModel(private val savedStateHandle: SavedStateHandle): ViewModel() {
+
+    companion object {
+        const val MAX_INVENTORY_SIZE = 6
+    }
+
     private var currentIntroIndex: Int
         get() = savedStateHandle.get(CURRENT_INTRO_INDEX_KEY) ?: 0
         set(value) = savedStateHandle.set(CURRENT_INTRO_INDEX_KEY, value)
 
     val currentIntro: Int
         get() = intros[currentIntroIndex]
+
+    val inventoryItems: MutableList<GameItem> = mutableListOf()
 
     fun moveToPrevIntro() {
         currentIntroIndex -= 1
