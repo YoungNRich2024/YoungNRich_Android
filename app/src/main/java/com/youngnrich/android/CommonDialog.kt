@@ -48,7 +48,7 @@ class CommonDialog: DialogFragment {
             binding.commonDialogTextView.setText(dialogText!!)
         }
         if (dialogTexts != null) {
-            // TODO next 버튼 활성화 & next 버튼 눌렀을 때 다음 텍스트 나타나게 & 마지막 텍스트에서는 다시 next 버튼 비활성화
+            // TODO: next 버튼 활성화 & next 버튼 눌렀을 때 다음 텍스트 나타나게 & 마지막 텍스트에서는 다시 next 버튼 비활성화
         }
 
         return binding.root
