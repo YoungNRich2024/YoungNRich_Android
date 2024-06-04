@@ -28,7 +28,25 @@
     <string name="prev_button">go-to-previous button</string>
     <string name="next_button">go-to-next button</string>
     <string name="game_button">go-to-game button</string>
+    <string name="left_arrow">left arrow</string>
+    <string name="first_room_background">first room background</string>
+    <string name="right_arrow">right arrow</string>
+    <string name="bottom_arrow">bottom arrow</string>
+    <string name="television_on">television set-on</string>
     <string name="ipad">ipad</string>
+    <string name="room_background">room background</string>
+    <string name="pillow">pillow</string>
+    <string name="picture_frame">picture frame</string>
+    <string name="common_dialog">common dialog</string>
+
+    <string name="dialog_ipad">아이패드를 발견했다…!</string>
+    <string name="dialog_picture_frame">할아버지와 어린 시절의 내가 함께 찍힌 사진이다.\n
+                    동전 탑을 쌓으며 할아버지와 즐거운 시간을 보냈던 그 시절은 아직까지도 내게 가장 행복했던 기억으로 남아있다…</string>
+    <string name="dialog_pillow">리모콘을 발견했다…!</string>
+    <string name="dialog_television">TV의 채널을 돌릴 무언가가 필요하다…</string>
+    <string name="next_dialog_button">next dialog button</string>
+    <string name="close_button">close dialog button</string>
+
     <string name="quiz_1_title">오늘의 경제 퀴즈 #1</string>
     <string name="ipad_quiz_1_1">경제에 대한 불확실성이 커지면 투자 심리도 함께 얼어붙어\n주가가</string>
     <string name="ipad_quiz_1_2">할 가능성이 커집니다.</string>
@@ -51,4 +69,5 @@
     <string name="ipad_quiz_result_title_fail">정답이 아닙니다!</string>
     <string name="ipad_quiz_result_detail_success">침실 탈출에 성공하셨습니다!\n다음 방으로 이동하세요.</string>
     <string name="ipad_quiz_result_detail_fail">퀴즈를 푸는데 실패하셨군요.\n다시 도전해보세요!</string>
+    <string name="zoomed_television">zoomed television</string>
 </resources>
