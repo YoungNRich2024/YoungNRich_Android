@@ -3,15 +3,12 @@ package com.youngnrich.android
 import android.content.Context
 import android.content.Intent
 import android.graphics.Rect
-import android.graphics.drawable.BitmapDrawable
 import android.os.Bundle
 import android.util.Log
 import android.view.MotionEvent
 import android.view.View
-import android.widget.ImageView
 import androidx.activity.enableEdgeToEdge
 import androidx.activity.viewModels
-import androidx.appcompat.content.res.AppCompatResources
 import androidx.core.view.ViewCompat
 import androidx.core.view.WindowInsetsCompat
 import androidx.fragment.app.Fragment
@@ -65,7 +62,7 @@ class FirstRoomGameActivity : BaseGameActivity() {
                 slotImageButton.setOnClickListener {
                     Log.d(TAG, "slotImageButton $slotNumber is CLICKED!!!")
 
-                    if (isImageSrcMatched(slotImageView, IPAD.drawableResId)) {
+                    if (hasItem(slot, IPAD)) {
                         Log.d(TAG, "Ipad in Inventory is CLICKED!!!")
 
                         IPAD.isSelected = true
@@ -73,7 +70,7 @@ class FirstRoomGameActivity : BaseGameActivity() {
                         activateSlotButtonUI(slot)
                     }
 
-                    if (isImageSrcMatched(slotImageView, REMOTE_CONTROLLER.drawableResId)) {
+                    if (hasItem(slot, REMOTE_CONTROLLER)) {
                         Log.d(TAG, "Remote Controller in Inventory is CLICKED!!!")
 
                         REMOTE_CONTROLLER.isSelected = true
@@ -227,18 +224,12 @@ class FirstRoomGameActivity : BaseGameActivity() {
             .commit()
     }
 
-    // TODO: TvFragment 를 들어갔다가 나오면 itemDrawableResId 가 달라져있음 -- 고쳐야 함
-    private fun isImageSrcMatched(slotImageView: ImageView?, itemDrawableResId: Int?): Boolean {
-        val bitmapDrawable = slotImageView?.drawable as? BitmapDrawable
-        val expectedDrawable = AppCompatResources.getDrawable(this, itemDrawableResId!!) as BitmapDrawable
-
-        Log.d(TAG, "bitmapDrawable: $bitmapDrawable")
-        Log.d(TAG, "expectedDrawable: $expectedDrawable")
-
-        Log.d(TAG, "bitmapDrawable?.bitmap: ${bitmapDrawable?.bitmap}")
-        Log.d(TAG, "expectedDrawable.bitmap: ${expectedDrawable.bitmap}")
-
-        return bitmapDrawable?.bitmap == expectedDrawable.bitmap
+    private fun hasItem(slot: Slot, item: GameItem): Boolean {
+        return  if (slot.slotNumber < ynrViewModel.inventoryItems.size) {
+            ynrViewModel.inventoryItems[slot.slotNumber] == item
+        } else {
+            false
+        }
     }
 
     private fun chooseSlotToFill(slotNumber: Int): Slot {
