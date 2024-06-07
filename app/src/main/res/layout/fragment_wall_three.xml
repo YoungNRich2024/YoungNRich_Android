@@ -1,0 +1,145 @@
+<?xml version="1.0" encoding="utf-8"?>
+<HorizontalScrollView xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent">
+
+    <androidx.constraintlayout.widget.ConstraintLayout
+        android:layout_width="wrap_content"
+        android:layout_height="match_parent">
+
+        <ImageView
+            android:id="@+id/wallThreeBackgroundImageView"
+            android:layout_width="wrap_content"
+            android:layout_height="match_parent"
+            app:layout_constraintTop_toTopOf="parent"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintEnd_toEndOf="parent"
+            android:adjustViewBounds="true"
+            android:contentDescription="@string/wall_three_background"
+            android:scaleType="fitCenter"
+            android:src="@drawable/wall_three_background_bright" />
+
+        <androidx.constraintlayout.widget.Guideline
+            android:id="@+id/wallThreeGrandpaFrameTopGuideline"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal"
+            app:layout_constraintGuide_percent="0.22" />
+
+        <androidx.constraintlayout.widget.Guideline
+            android:id="@+id/wallThreeGrandpaFrameBottomGuideline"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal"
+            app:layout_constraintGuide_percent="0.46" />
+
+        <androidx.constraintlayout.widget.Guideline
+            android:id="@+id/wallThreeGrandpaFrameStartGuideline"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:orientation="vertical"
+            app:layout_constraintGuide_percent="0.2" />
+
+        <androidx.constraintlayout.widget.Guideline
+            android:id="@+id/wallThreeGrandpaFrameEndGuideline"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:orientation="vertical"
+            app:layout_constraintGuide_percent="0.3" />
+
+        <ImageButton
+            android:id="@+id/grandpaFrameImageButton"
+            android:layout_width="0dp"
+            android:layout_height="0dp"
+            app:layout_constraintStart_toStartOf="@id/wallThreeGrandpaFrameStartGuideline"
+            app:layout_constraintEnd_toEndOf="@id/wallThreeGrandpaFrameEndGuideline"
+            app:layout_constraintTop_toTopOf="@id/wallThreeGrandpaFrameTopGuideline"
+            app:layout_constraintBottom_toBottomOf="@id/wallThreeGrandpaFrameBottomGuideline"
+            android:src="@color/transparency_indicator"
+            android:background="@color/transparency"
+            android:contentDescription="@string/grandpa_frame" />
+
+        <androidx.constraintlayout.widget.Guideline
+            android:id="@+id/wallThreeCoatTopGuideline"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal"
+            app:layout_constraintGuide_percent="0.3" />
+
+        <androidx.constraintlayout.widget.Guideline
+            android:id="@+id/wallThreeCoatBottomGuideline"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal"
+            app:layout_constraintGuide_percent="0.75" />
+
+        <androidx.constraintlayout.widget.Guideline
+            android:id="@+id/wallThreeCoatStartGuideline"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:orientation="vertical"
+            app:layout_constraintGuide_percent="0.67" />
+
+        <androidx.constraintlayout.widget.Guideline
+            android:id="@+id/wallThreeCoatEndGuideline"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:orientation="vertical"
+            app:layout_constraintGuide_percent="0.8" />
+
+        <ImageButton
+            android:id="@+id/coatImageButton"
+            android:layout_width="0dp"
+            android:layout_height="0dp"
+            android:src="@color/transparency_indicator"
+            android:background="@color/transparency"
+            app:layout_constraintTop_toTopOf="@id/wallThreeCoatTopGuideline"
+            app:layout_constraintBottom_toBottomOf="@id/wallThreeCoatBottomGuideline"
+            app:layout_constraintStart_toStartOf="@id/wallThreeCoatStartGuideline"
+            app:layout_constraintEnd_toEndOf="@id/wallThreeCoatEndGuideline"
+            android:contentDescription="@string/coat" />
+
+        <androidx.constraintlayout.widget.Guideline
+            android:id="@+id/wallThreeDoorTopGuideline"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal"
+            app:layout_constraintGuide_percent="0.20" />
+
+        <androidx.constraintlayout.widget.Guideline
+            android:id="@+id/wallThreeDoorBottomGuideline"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal"
+            app:layout_constraintGuide_percent="0.92" />
+
+        <androidx.constraintlayout.widget.Guideline
+            android:id="@+id/wallThreeDoorStartGuideline"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:orientation="vertical"
+            app:layout_constraintGuide_percent="0.42" />
+
+        <androidx.constraintlayout.widget.Guideline
+            android:id="@+id/wallThreeDoorEndGuideline"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:orientation="vertical"
+            app:layout_constraintGuide_percent="0.61"/>
+
+        <ImageButton
+            android:id="@+id/wallThreeDoorImageButton"
+            android:layout_width="0dp"
+            android:layout_height="0dp"
+            android:src="@color/transparency_indicator"
+            android:background="@color/transparency"
+            app:layout_constraintStart_toStartOf="@id/wallThreeDoorStartGuideline"
+            app:layout_constraintEnd_toEndOf="@id/wallThreeDoorEndGuideline"
+            app:layout_constraintTop_toTopOf="@id/wallThreeDoorTopGuideline"
+            app:layout_constraintBottom_toBottomOf="@id/wallThreeDoorBottomGuideline"
+            android:contentDescription="@string/door" />
+
+    </androidx.constraintlayout.widget.ConstraintLayout>
+</HorizontalScrollView>
