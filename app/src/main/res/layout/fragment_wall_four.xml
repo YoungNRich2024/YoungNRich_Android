@@ -1,0 +1,96 @@
+<?xml version="1.0" encoding="utf-8"?>
+<HorizontalScrollView xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent">
+
+    <androidx.constraintlayout.widget.ConstraintLayout
+        android:layout_width="wrap_content"
+        android:layout_height="match_parent">
+
+        <ImageView
+            android:id="@+id/wallFourBackgroundImageView"
+            android:layout_width="wrap_content"
+            android:layout_height="match_parent"
+            android:adjustViewBounds="true"
+            android:contentDescription="@string/wall_four_background"
+            android:scaleType="fitCenter"
+            android:src="@drawable/wall_four_background_bright"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintHorizontal_bias="0.0"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent"
+            app:layout_constraintVertical_bias="0.0" />
+
+        <androidx.constraintlayout.widget.Guideline
+            android:id="@+id/wallFourTopGuideline"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal"
+            app:layout_constraintGuide_percent="0.10" />
+
+        <ImageButton
+            android:id="@+id/windowImageButton"
+            android:layout_width="wrap_content"
+            android:layout_height="0dp"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintTop_toTopOf="@id/wallFourTopGuideline"
+            app:layout_constraintBottom_toBottomOf="@id/wallFourBottomGuideline"
+            android:src="@drawable/window_open"
+            android:scaleType="centerInside"
+            android:adjustViewBounds="true"
+            android:background="@color/transparency"
+            android:contentDescription="@string/window" />
+
+        <androidx.constraintlayout.widget.Guideline
+            android:id="@+id/wallFourLampStartGuideline"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:orientation="vertical"
+            app:layout_constraintGuide_percent="0.25" />
+
+        <androidx.constraintlayout.widget.Guideline
+            android:id="@+id/wallFourBottomGuideline"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal"
+            app:layout_constraintGuide_percent="0.82" />
+
+        <androidx.constraintlayout.widget.Guideline
+            android:id="@+id/wallFourLampTopGuideline"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal"
+            app:layout_constraintGuide_percent="0.28" />
+
+        <ImageButton
+            android:id="@+id/lampImageButton"
+            android:layout_width="wrap_content"
+            android:layout_height="0dp"
+            app:layout_constraintStart_toStartOf="@id/wallFourLampStartGuideline"
+            app:layout_constraintTop_toTopOf="@id/wallFourLampTopGuideline"
+            app:layout_constraintBottom_toBottomOf="@id/wallFourBottomGuideline"
+            android:src="@drawable/lamp_bright"
+            android:scaleType="centerInside"
+            android:adjustViewBounds="true"
+            android:background="@color/transparency"
+            android:contentDescription="@string/lamp" />
+
+        <ImageButton
+            android:id="@+id/baggageImageButton"
+            android:layout_width="wrap_content"
+            android:layout_height="80dp"
+            app:layout_constraintStart_toStartOf="@id/wallFourLampStartGuideline"
+            app:layout_constraintTop_toTopOf="@id/wallFourBottomGuideline"
+            app:layout_constraintBottom_toBottomOf="@id/wallFourBottomGuideline"
+            android:layout_marginStart="20dp"
+            android:src="@drawable/baggage_bright"
+            android:scaleType="centerInside"
+            android:adjustViewBounds="true"
+            android:background="@color/transparency"
+            android:contentDescription="@string/baggage" />
+
+    </androidx.constraintlayout.widget.ConstraintLayout>
+</HorizontalScrollView>
