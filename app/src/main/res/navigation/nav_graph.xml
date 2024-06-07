@@ -1,0 +1,83 @@
+<?xml version="1.0" encoding="utf-8"?>
+<navigation xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/nav_graph"
+    app:startDestination="@id/wallOneFragment">
+
+    <fragment
+        android:id="@+id/wallOneFragment"
+        android:name="com.youngnrich.android.WallOneFragment"
+        android:label="fragment_wall_one"
+        tools:layout="@layout/fragment_wall_one" >
+        <action
+            android:id="@+id/action_wallOneFragment_to_wallTwoFragment"
+            app:destination="@id/wallTwoFragment"
+            app:popUpTo="@id/wallOneFragment"
+            app:popUpToInclusive="true"
+            app:launchSingleTop="true" />
+        <action
+            android:id="@+id/action_wallOneFragment_to_wallFourFragment"
+            app:destination="@id/wallFourFragment"
+            app:popUpTo="@id/wallOneFragment"
+            app:popUpToInclusive="true"
+            app:launchSingleTop="true" />
+    </fragment>
+
+    <fragment
+        android:id="@+id/wallTwoFragment"
+        android:name="com.youngnrich.android.WallTwoFragment"
+        android:label="fragment_wall_two"
+        tools:layout="@layout/fragment_wall_two" >
+        <action
+            android:id="@+id/action_wallTwoFragment_to_wallThreeFragment"
+            app:destination="@id/wallThreeFragment"
+            app:popUpTo="@id/wallTwoFragment"
+            app:popUpToInclusive="true"
+            app:launchSingleTop="true" />
+        <action
+            android:id="@+id/action_wallTwoFragment_to_wallOneFragment"
+            app:destination="@id/wallOneFragment"
+            app:popUpTo="@id/wallTwoFragment"
+            app:popUpToInclusive="true"
+            app:launchSingleTop="true" />
+    </fragment>
+
+    <fragment
+        android:id="@+id/wallThreeFragment"
+        android:name="com.youngnrich.android.WallThreeFragment"
+        android:label="fragment_wall_three"
+        tools:layout="@layout/fragment_wall_three" >
+        <action
+            android:id="@+id/action_wallThreeFragment_to_wallFourFragment"
+            app:destination="@id/wallFourFragment"
+            app:popUpTo="@id/wallThreeFragment"
+            app:popUpToInclusive="true"
+            app:launchSingleTop="true" />
+        <action
+            android:id="@+id/action_wallThreeFragment_to_wallTwoFragment"
+            app:destination="@id/wallTwoFragment"
+            app:popUpTo="@id/wallThreeFragment"
+            app:popUpToInclusive="true"
+            app:launchSingleTop="true" />
+    </fragment>
+
+    <fragment
+        android:id="@+id/wallFourFragment"
+        android:name="com.youngnrich.android.WallFourFragment"
+        android:label="fragment_wall_four"
+        tools:layout="@layout/fragment_wall_four" >
+        <action
+            android:id="@+id/action_wallFourFragment_to_wallOneFragment"
+            app:destination="@id/wallOneFragment"
+            app:popUpTo="@id/wallFourFragment"
+            app:popUpToInclusive="true"
+            app:launchSingleTop="true" />
+        <action
+            android:id="@+id/action_wallFourFragment_to_wallThreeFragment"
+            app:destination="@id/wallThreeFragment"
+            app:popUpTo="@id/wallFourFragment"
+            app:popUpToInclusive="true"
+            app:launchSingleTop="true" />
+    </fragment>
+</navigation>
