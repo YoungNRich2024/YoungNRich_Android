@@ -70,4 +70,20 @@
     <string name="ipad_quiz_result_detail_success">침실 탈출에 성공하셨습니다!\n다음 방으로 이동하세요.</string>
     <string name="ipad_quiz_result_detail_fail">퀴즈를 푸는데 실패하셨군요.\n다시 도전해보세요!</string>
     <string name="zoomed_television">zoomed television</string>
+    <string name="moving_room">moving room</string>
+
+    <string name="wall_one_background">wall one background</string>
+    <string name="bookshelf">bookshelf</string>
+    <string name="storage_closet">storage closet</string>
+    <string name="radio_table">table with a radio</string>
+    <string name="wall_three_background">wall three background</string>
+    <string name="grandpa_frame">grandpa frame</string>
+    <string name="coat">coat on hanger</string>
+    <string name="door">door between Room 1 and Room 2</string>
+    <string name="wall_four_background">wall four background</string>
+    <string name="lamp">lamp</string>
+    <string name="window">window</string>
+    <string name="baggage">baggage</string>
+    <string name="wall_two_background">wall two background</string>
+    <string name="vault">vault</string>
 </resources>
