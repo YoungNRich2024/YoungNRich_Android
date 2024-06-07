@@ -5,24 +5,26 @@
     android:id="@+id/main"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
+    android:background="@color/dark_blue"
     tools:context=".FirstRoomGameActivity">
 
-    <include layout="@layout/layout_base_inventory"
+    <include
         android:id="@+id/first_room_inventory"
+        layout="@layout/layout_base_inventory"
         android:layout_width="wrap_content"
         android:layout_height="match_parent"
-        app:layout_constraintTop_toTopOf="parent"
         app:layout_constraintBottom_toBottomOf="parent"
-        app:layout_constraintEnd_toEndOf="parent" />
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
 
     <FrameLayout
         android:layout_width="0dp"
         android:layout_height="match_parent"
+        android:background="@color/dark_blue"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toStartOf="@id/first_room_inventory"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toTopOf="parent"
-        android:background="@color/dark_blue">
+        app:layout_constraintTop_toTopOf="parent">
 
         <HorizontalScrollView
             android:layout_width="match_parent"
@@ -32,77 +34,162 @@
             app:layout_constraintStart_toStartOf="parent"
             app:layout_constraintTop_toTopOf="parent">
 
-            <RelativeLayout
+            <androidx.constraintlayout.widget.ConstraintLayout
                 android:layout_width="wrap_content"
                 android:layout_height="match_parent"
                 android:layout_gravity="center">
 
                 <ImageView
-                    android:id="@+id/roomBackgroundImageView"
+                    android:id="@+id/firstRoomBackgroundImageView"
                     android:layout_width="wrap_content"
                     android:layout_height="match_parent"
                     android:adjustViewBounds="true"
                     android:contentDescription="@string/first_room_background"
                     android:scaleType="fitCenter"
-                    android:src="@drawable/first_room_background" />
+                    android:src="@drawable/first_room_background"
+                    app:layout_constraintBottom_toBottomOf="parent"
+                    app:layout_constraintEnd_toEndOf="parent"
+                    app:layout_constraintHorizontal_bias="0.0"
+                    app:layout_constraintStart_toStartOf="parent"
+                    app:layout_constraintTop_toTopOf="parent" />
+
+                <androidx.constraintlayout.widget.Guideline
+                    android:id="@+id/tvStartGuideline"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:orientation="vertical"
+                    app:layout_constraintGuide_percent="0.599" />
+
+                <androidx.constraintlayout.widget.Guideline
+                    android:id="@+id/tvEndGuideline"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:orientation="vertical"
+                    app:layout_constraintGuide_percent="0.895" />
 
                 <ImageButton
                     android:id="@+id/televisionImageButton"
-                    android:layout_width="wrap_content"
-                    android:layout_height="240dp"
-                    android:layout_alignTop="@id/roomBackgroundImageView"
-                    android:layout_alignEnd="@id/roomBackgroundImageView"
-                    android:layout_marginTop="160dp"
-                    android:layout_marginEnd="68dp"
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
                     android:adjustViewBounds="true"
                     android:background="@color/transparency"
                     android:contentDescription="@string/television_on"
                     android:scaleType="fitCenter"
-                    android:src="@drawable/television_on" />
+                    android:src="@drawable/television_on"
+                    app:layout_constraintBottom_toBottomOf="parent"
+                    app:layout_constraintEnd_toEndOf="@id/tvEndGuideline"
+                    app:layout_constraintStart_toStartOf="@id/tvStartGuideline" />
+
+                <androidx.constraintlayout.widget.Guideline
+                    android:id="@+id/ipadStartGuideline"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:orientation="vertical"
+                    app:layout_constraintGuide_percent="0.17" />
+
+                <androidx.constraintlayout.widget.Guideline
+                    android:id="@+id/ipadBottomGuideline"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:orientation="horizontal"
+                    app:layout_constraintGuide_percent="0.93" />
 
                 <ImageButton
                     android:id="@+id/ipadImageButton"
-                    android:layout_width="95dp"
+                    android:layout_width="88dp"
                     android:layout_height="wrap_content"
-                    android:layout_alignStart="@id/roomBackgroundImageView"
-                    android:layout_alignBottom="@id/roomBackgroundImageView"
-                    android:layout_marginStart="95dp"
-                    android:layout_marginBottom="40dp"
                     android:adjustViewBounds="true"
                     android:background="@color/transparency"
                     android:contentDescription="@string/ipad"
                     android:scaleType="fitCenter"
-                    android:src="@drawable/ipad" />
+                    android:src="@drawable/ipad"
+                    app:layout_constraintBottom_toBottomOf="@id/ipadBottomGuideline"
+                    app:layout_constraintStart_toStartOf="@id/ipadStartGuideline" />
+
+                <androidx.constraintlayout.widget.Guideline
+                    android:id="@+id/pillowStartGuideline"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:orientation="vertical"
+                    app:layout_constraintGuide_percent="0.535" />
+
+                <androidx.constraintlayout.widget.Guideline
+                    android:id="@+id/pillowEndGuideline"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:orientation="vertical"
+                    app:layout_constraintGuide_percent="0.665" />
+
+                <androidx.constraintlayout.widget.Guideline
+                    android:id="@+id/pillowTopGuideline"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:orientation="horizontal"
+                    app:layout_constraintGuide_percent="0.34" />
+
+                <androidx.constraintlayout.widget.Guideline
+                    android:id="@+id/pillowBottomGuideline"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:orientation="horizontal"
+                    app:layout_constraintGuide_percent="0.44" />
 
                 <ImageButton
                     android:id="@+id/pillowImageView"
-                    android:layout_width="80dp"
-                    android:layout_height="48dp"
-                    android:layout_alignTop="@id/roomBackgroundImageView"
-                    android:layout_alignEnd="@id/roomBackgroundImageView"
-                    android:layout_marginTop="135dp"
-                    android:layout_marginEnd="240dp"
-                    android:padding="0dp"
+                    android:layout_width="0dp"
+                    android:layout_height="0dp"
                     android:background="@color/transparency"
                     android:contentDescription="@string/pillow"
-                    android:src="@color/transparency_indicator" />
+                    android:src="@color/transparency_indicator"
+                    app:layout_constraintBottom_toBottomOf="@id/pillowBottomGuideline"
+                    app:layout_constraintEnd_toEndOf="@id/pillowEndGuideline"
+                    app:layout_constraintStart_toStartOf="@id/pillowStartGuideline"
+                    app:layout_constraintTop_toTopOf="@id/pillowTopGuideline" />
+
+                <androidx.constraintlayout.widget.Guideline
+                    android:id="@+id/pictureFrameStartGuideline"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:orientation="vertical"
+                    app:layout_constraintGuide_percent="0.77" />
+
+                <androidx.constraintlayout.widget.Guideline
+                    android:id="@+id/pictureFrameEndGuideline"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:orientation="vertical"
+                    app:layout_constraintGuide_percent="0.89" />
+
+                <androidx.constraintlayout.widget.Guideline
+                    android:id="@+id/pictureFrameTopGuideline"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:orientation="horizontal"
+                    app:layout_constraintGuide_percent="0.045" />
+
+                <androidx.constraintlayout.widget.Guideline
+                    android:id="@+id/pictureFrameBottomGuideline"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:orientation="horizontal"
+                    app:layout_constraintGuide_percent="0.21" />
 
                 <ImageView
                     android:id="@+id/pictureFrameImageView"
-                    android:layout_width="80dp"
-                    android:layout_height="60dp"
-                    android:layout_alignTop="@id/roomBackgroundImageView"
-                    android:layout_alignEnd="@id/roomBackgroundImageView"
-                    android:layout_marginTop="24dp"
-                    android:layout_marginEnd="80dp"
+                    android:layout_width="0dp"
+                    android:layout_height="0dp"
                     android:contentDescription="@string/picture_frame"
-                    android:src="@color/transparency_indicator" />
-            </RelativeLayout>
+                    android:src="@color/transparency_indicator"
+                    app:layout_constraintBottom_toBottomOf="@id/pictureFrameBottomGuideline"
+                    app:layout_constraintEnd_toEndOf="@id/pictureFrameEndGuideline"
+                    app:layout_constraintStart_toStartOf="@id/pictureFrameStartGuideline"
+                    app:layout_constraintTop_toTopOf="@id/pictureFrameTopGuideline" />
+            </androidx.constraintlayout.widget.ConstraintLayout>
         </HorizontalScrollView>
     </FrameLayout>
 
     <androidx.fragment.app.FragmentContainerView
-        android:id="@+id/fragment_container_view"
+        android:id="@+id/first_room_fragment_container_view"
         android:layout_width="match_parent"
         android:layout_height="match_parent" />
 
