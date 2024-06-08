@@ -6,57 +6,62 @@ import android.view.LayoutInflater
 import android.view.View
 import android.view.ViewGroup
 import androidx.fragment.app.Fragment
+import com.youngnrich.android.databinding.FragmentWallThreeBinding
 
-// TODO: Rename parameter arguments, choose names that match
-// the fragment initialization parameters, e.g. ARG_ITEM_NUMBER
-private const val ARG_PARAM1 = "param1"
-private const val ARG_PARAM2 = "param2"
+private const val TAG = "Wall-3 Fragment"
 
-/**
- * A simple [Fragment] subclass.
- * Use the [WallThreeFragment.newInstance] factory method to
- * create an instance of this fragment.
- */
 class WallThreeFragment : Fragment() {
-    // TODO: Rename and change types of parameters
-    private var param1: String? = null
-    private var param2: String? = null
+    private var _binding: FragmentWallThreeBinding? = null
+    private val binding
+        get() = checkNotNull(_binding) {
+            "Cannot access binding because it is null. Is the view visible?"
+        }
 
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
-        arguments?.let {
-            param1 = it.getString(ARG_PARAM1)
-            param2 = it.getString(ARG_PARAM2)
-        }
+
     }
 
     override fun onCreateView(
         inflater: LayoutInflater, container: ViewGroup?,
         savedInstanceState: Bundle?
     ): View? {
-        Log.d("WallThreeFragment", "you're now in Wall 3")
+        Log.d(TAG, "you're now in Wall 3")
 
-        // Inflate the layout for this fragment
-        return inflater.inflate(R.layout.fragment_wall_three, container, false)
+        _binding = FragmentWallThreeBinding.inflate(inflater, container, false)
+
+        return binding.root
     }
 
-    companion object {
-        /**
-         * Use this factory method to create a new instance of
-         * this fragment using the provided parameters.
-         *
-         * @param param1 Parameter 1.
-         * @param param2 Parameter 2.
-         * @return A new instance of fragment WallThreeFragment.
-         */
-        // TODO: Rename and change types and number of parameters
-        @JvmStatic
-        fun newInstance(param1: String, param2: String) =
-            WallThreeFragment().apply {
-                arguments = Bundle().apply {
-                    putString(ARG_PARAM1, param1)
-                    putString(ARG_PARAM2, param2)
-                }
+    override fun onViewCreated(view: View, savedInstanceState: Bundle?) {
+        super.onViewCreated(view, savedInstanceState)
+
+        binding.apply {
+            grandpaFrameImageButton.setOnClickListener {
+                Log.d(TAG, "Grandpa Frame is CLICKED!!!")
+
+                // TODO: 할아버지 액자에 대한 내용이 담긴 다이얼로그 띄우기
             }
+
+            wallThreeDoorImageButton.setOnClickListener {
+                Log.d(TAG, "Door between Room 1 and Room 2 is CLICKED!!!")
+
+                // TODO: 문에 대한 내용이 담긴 다이얼로그 띄우기
+            }
+
+            coatImageButton.setOnClickListener {
+                Log.d(TAG, "Coat is CLICKED!!!")
+
+                // TODO: 코트 안의 열쇠에 대한 내용이 담긴 다이얼로그 띄우기 & 인벤토리에 열쇠 넣기
+            }
+        }
+    }
+
+    override fun onDestroyView() {
+        super.onDestroyView()
+
+        Log.d(TAG, "onDestroyView(), Wall-3")
+
+        _binding = null
     }
 }
