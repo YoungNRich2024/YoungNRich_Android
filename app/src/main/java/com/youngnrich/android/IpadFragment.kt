@@ -88,7 +88,7 @@ class IpadFragment : Fragment() {
                 binding.ipadQuiz1.visibility = View.VISIBLE
             }
 
-            val toggleGroups = listOf(
+            val toggleGroups = arrayOf(
                 quiz21ToggleGroup,
                 quiz22ToggleGroup,
                 quiz23ToggleGroup,
@@ -97,7 +97,7 @@ class IpadFragment : Fragment() {
             toggleGroups.forEach {
                 it.addOnButtonCheckedListener { toggleGroup, checkedId, isChecked ->
                     if (isChecked) {
-                        when (it) {
+                        when (toggleGroup) {
                             quiz21ToggleGroup -> {
                                 ipadViewModel.quiz2_1UserAnswerResId = checkedId
                                 ipadViewModel.question2_1.isAnswered = true
