@@ -51,5 +51,7 @@ dependencies {
     androidTestImplementation(libs.ext.junit)
     androidTestImplementation(libs.espresso.core)
 
+    implementation("com.pierfrancescosoffritti.androidyoutubeplayer:core:12.1.0")   // for 유튜브 영상
+
     implementation(libs.core.splashscreen)
 }
