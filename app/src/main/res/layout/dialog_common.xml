@@ -25,7 +25,6 @@
         app:layout_constraintEnd_toEndOf="@id/commonDialogBackgroundImageView"
         app:layout_constraintTop_toTopOf="@id/commonDialogBackgroundImageView"
         app:layout_constraintBottom_toBottomOf="@id/commonDialogBackgroundImageView"
-        android:maxLines="3"
         tools:text="다이얼로그의 테스트 멘트 입니다. 다이얼로그의 테스트 멘트 입니다. 다이얼로그의 테스트 멘트 입니다. 다이얼로그의 테스트 멘트 입니다. 다이얼로그의 테스트 멘트 입니다. 다이얼로그의 테스트 멘트 입니다. 다이얼로그의 테스트 멘트 입니다."
         android:ellipsize="end"
         android:textSize="16sp"
@@ -35,19 +34,20 @@
 
     <ImageButton
         android:id="@+id/nextDialogImageButton"
-        android:layout_width="56dp"
-        android:layout_height="wrap_content"
+        android:layout_width="wrap_content"
+        android:layout_height="28dp"
         android:src="@drawable/next_button_black"
         android:background="@color/transparency"
         android:adjustViewBounds="true"
         android:scaleType="fitCenter"
         app:layout_constraintEnd_toEndOf="@id/commonDialogBackgroundImageView"
         app:layout_constraintBottom_toBottomOf="@id/commonDialogBackgroundImageView"
-        android:layout_marginBottom="12dp"
-        android:layout_marginEnd="12dp"
+        android:layout_marginBottom="6dp"
+        android:layout_marginEnd="4dp"
         android:contentDescription="@string/next_dialog_button" />
 
     <FrameLayout
+        android:id="@+id/closeDialogFrameLayout"
         android:layout_width="36dp"
         android:layout_height="36dp"
         app:layout_constraintEnd_toEndOf="@id/commonDialogBackgroundImageView"
