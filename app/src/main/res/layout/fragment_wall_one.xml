@@ -21,12 +21,12 @@
             android:scaleType="fitCenter"
             android:src="@drawable/wall_one_background_bright" />
 
-        <androidx.constraintlayout.widget.Guideline
-            android:id="@+id/wallOneBottomGuideline"
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:orientation="horizontal"
-            app:layout_constraintGuide_percent="0.96" />
+            <androidx.constraintlayout.widget.Guideline
+                android:id="@+id/wallOneBottomGuideline"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:orientation="horizontal"
+                app:layout_constraintGuide_percent="0.96" />
 
         <androidx.constraintlayout.widget.Guideline
             android:id="@+id/wallOneTopGuideline"
@@ -49,18 +49,18 @@
             android:background="@color/transparency"
             android:contentDescription="@string/bookshelf" />
 
-        <ImageButton
-            android:id="@+id/storageClosetImageButton"
-            android:layout_width="wrap_content"
-            android:layout_height="96dp"
-            android:src="@drawable/storage_closet_closed_bright"
-            android:scaleType="centerInside"
-            android:adjustViewBounds="true"
-            android:background="@color/transparency"
-            app:layout_constraintBottom_toTopOf="@id/wallOneBottomGuideline"
-            app:layout_constraintEnd_toStartOf="@id/bookshelfImageButton"
-            android:layout_marginEnd="8dp"
-            android:contentDescription="@string/storage_closet" />
+            <ImageButton
+                android:id="@+id/storageClosetImageButton"
+                android:layout_width="wrap_content"
+                android:layout_height="96dp"
+                android:layout_marginEnd="8dp"
+                android:adjustViewBounds="true"
+                android:background="@color/transparency"
+                android:contentDescription="@string/storage_closet"
+                android:scaleType="centerInside"
+                android:src="@drawable/storage_closet_closed_bright"
+                app:layout_constraintBottom_toTopOf="@id/wallOneBottomGuideline"
+                app:layout_constraintEnd_toStartOf="@id/bookshelfConstraintLayout" />
 
         <ImageButton
             android:id="@+id/radioTableImageButton"

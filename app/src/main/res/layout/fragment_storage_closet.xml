@@ -1,0 +1,280 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@drawable/zoomed_background"
+    android:clickable="true"
+    android:focusable="true"
+    tools:context=".StorageClosetFragment">
+
+    <androidx.constraintlayout.widget.ConstraintLayout
+        android:layout_width="wrap_content"
+        android:layout_height="0dp"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHeight_percent="0.95"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent">
+
+        <ImageView
+            android:id="@+id/zoomedStorageClosetImageView"
+            android:layout_width="wrap_content"
+            android:layout_height="match_parent"
+            android:adjustViewBounds="true"
+            android:contentDescription="@string/zoomed_storage_closet"
+            android:src="@drawable/zoomed_storage_closet"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent" />
+
+        <androidx.constraintlayout.widget.Guideline
+            android:id="@+id/upperSwitchesTopGuideline"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal"
+            app:layout_constraintGuide_percent="0.13" />
+
+        <androidx.constraintlayout.widget.Guideline
+            android:id="@+id/upperSwitchesBottomGuideline"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal"
+            app:layout_constraintGuide_percent="0.40" />
+
+        <androidx.constraintlayout.widget.Guideline
+            android:id="@+id/lowerSwitchesTopGuideline"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal"
+            app:layout_constraintGuide_percent="0.55" />
+
+        <androidx.constraintlayout.widget.Guideline
+            android:id="@+id/lowerSwitchesBottomGuideline"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal"
+            app:layout_constraintGuide_percent="0.82" />
+
+        <androidx.constraintlayout.widget.Guideline
+            android:id="@+id/zoomedStorageClosetBottomGuideline"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal"
+            app:layout_constraintGuide_percent="0.88" />
+
+        <androidx.constraintlayout.widget.Guideline
+            android:id="@+id/zoomedStorageClosetEndGuideline"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:orientation="vertical"
+            app:layout_constraintGuide_percent="0.865" />
+
+        <LinearLayout
+            android:id="@+id/upperSwitchesLinearLayout"
+            android:layout_width="wrap_content"
+            android:layout_height="0dp"
+            android:orientation="vertical"
+            app:layout_constraintBottom_toBottomOf="@id/upperSwitchesBottomGuideline"
+            app:layout_constraintEnd_toEndOf="@id/zoomedStorageClosetImageView"
+            app:layout_constraintStart_toStartOf="@id/zoomedStorageClosetImageView"
+            app:layout_constraintTop_toTopOf="@id/upperSwitchesTopGuideline">
+
+            <androidx.constraintlayout.widget.ConstraintLayout
+                android:layout_width="wrap_content"
+                android:layout_height="0dp"
+                android:layout_gravity="center"
+                android:layout_marginBottom="4dp"
+                android:layout_weight="1">
+
+                <ImageView
+                    android:id="@+id/blueBookSwitchImageView"
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:adjustViewBounds="true"
+                    android:contentDescription="@string/blue_book_switch"
+                    android:src="@drawable/switch_blue_true"
+                    app:layout_constraintBottom_toBottomOf="parent"
+                    app:layout_constraintEnd_toEndOf="parent"
+                    app:layout_constraintStart_toStartOf="parent"
+                    app:layout_constraintTop_toTopOf="parent" />
+
+                <Button
+                    android:id="@+id/blueBookSwitchTrueButton"
+                    android:layout_width="0dp"
+                    android:layout_height="0dp"
+                    android:background="@color/transparency"
+                    app:layout_constraintBottom_toBottomOf="@id/blueBookSwitchImageView"
+                    app:layout_constraintStart_toStartOf="@id/blueBookSwitchImageView"
+                    app:layout_constraintTop_toTopOf="@id/blueBookSwitchImageView"
+                    app:layout_constraintWidth_percent="0.5" />
+
+                <Button
+                    android:id="@+id/blueBookSwitchFalseButton"
+                    android:layout_width="0dp"
+                    android:layout_height="0dp"
+                    android:background="@color/transparency"
+                    app:layout_constraintBottom_toBottomOf="@id/blueBookSwitchImageView"
+                    app:layout_constraintEnd_toEndOf="@id/blueBookSwitchImageView"
+                    app:layout_constraintTop_toTopOf="@id/blueBookSwitchImageView"
+                    app:layout_constraintWidth_percent="0.5" />
+            </androidx.constraintlayout.widget.ConstraintLayout>
+
+            <androidx.constraintlayout.widget.ConstraintLayout
+                android:layout_width="wrap_content"
+                android:layout_height="0dp"
+                android:layout_gravity="center"
+                android:layout_marginTop="4dp"
+                android:layout_weight="1">
+
+                <ImageView
+                    android:id="@+id/greenBookSwitchImageView"
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:adjustViewBounds="true"
+                    android:contentDescription="@string/green_book_switch"
+                    android:src="@drawable/switch_green_true"
+                    app:layout_constraintBottom_toBottomOf="parent"
+                    app:layout_constraintEnd_toEndOf="parent"
+                    app:layout_constraintStart_toStartOf="parent"
+                    app:layout_constraintTop_toTopOf="parent" />
+
+                <Button
+                    android:id="@+id/greenBookSwitchTrueButton"
+                    android:layout_width="0dp"
+                    android:layout_height="0dp"
+                    android:background="@color/transparency"
+                    app:layout_constraintBottom_toBottomOf="@id/greenBookSwitchImageView"
+                    app:layout_constraintStart_toStartOf="@id/greenBookSwitchImageView"
+                    app:layout_constraintTop_toTopOf="@id/greenBookSwitchImageView"
+                    app:layout_constraintWidth_percent="0.5" />
+
+                <Button
+                    android:id="@+id/greenBookSwitchFalseButton"
+                    android:layout_width="0dp"
+                    android:layout_height="0dp"
+                    android:background="@color/transparency"
+                    app:layout_constraintBottom_toBottomOf="@id/greenBookSwitchImageView"
+                    app:layout_constraintEnd_toEndOf="@id/greenBookSwitchImageView"
+                    app:layout_constraintTop_toTopOf="@id/greenBookSwitchImageView"
+                    app:layout_constraintWidth_percent="0.5" />
+            </androidx.constraintlayout.widget.ConstraintLayout>
+        </LinearLayout>
+
+        <LinearLayout
+            android:id="@+id/lowerSwitchesLinearLayout"
+            android:layout_width="wrap_content"
+            android:layout_height="0dp"
+            android:orientation="vertical"
+            app:layout_constraintBottom_toBottomOf="@id/lowerSwitchesBottomGuideline"
+            app:layout_constraintEnd_toEndOf="@id/zoomedStorageClosetImageView"
+            app:layout_constraintStart_toStartOf="@id/zoomedStorageClosetImageView"
+            app:layout_constraintTop_toTopOf="@id/lowerSwitchesTopGuideline">
+
+            <androidx.constraintlayout.widget.ConstraintLayout
+                android:layout_width="wrap_content"
+                android:layout_height="0dp"
+                android:layout_gravity="center"
+                android:layout_marginBottom="4dp"
+                android:layout_weight="1">
+
+                <ImageView
+                    android:id="@+id/redBookSwitchImageView"
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:adjustViewBounds="true"
+                    android:contentDescription="@string/red_book_switch"
+                    android:src="@drawable/switch_red_true"
+                    app:layout_constraintBottom_toBottomOf="parent"
+                    app:layout_constraintEnd_toEndOf="parent"
+                    app:layout_constraintStart_toStartOf="parent"
+                    app:layout_constraintTop_toTopOf="parent" />
+
+                <Button
+                    android:id="@+id/redBookSwitchTrueButton"
+                    android:layout_width="0dp"
+                    android:layout_height="0dp"
+                    android:background="@color/transparency"
+                    app:layout_constraintBottom_toBottomOf="@id/redBookSwitchImageView"
+                    app:layout_constraintStart_toStartOf="@id/redBookSwitchImageView"
+                    app:layout_constraintTop_toTopOf="@id/redBookSwitchImageView"
+                    app:layout_constraintWidth_percent="0.5" />
+
+                <Button
+                    android:id="@+id/redBookSwitchFalseButton"
+                    android:layout_width="0dp"
+                    android:layout_height="0dp"
+                    android:background="@color/transparency"
+                    app:layout_constraintBottom_toBottomOf="@id/redBookSwitchImageView"
+                    app:layout_constraintEnd_toEndOf="@id/redBookSwitchImageView"
+                    app:layout_constraintTop_toTopOf="@id/redBookSwitchImageView"
+                    app:layout_constraintWidth_percent="0.5" />
+            </androidx.constraintlayout.widget.ConstraintLayout>
+
+            <androidx.constraintlayout.widget.ConstraintLayout
+                android:layout_width="wrap_content"
+                android:layout_height="0dp"
+                android:layout_gravity="center"
+                android:layout_marginTop="4dp"
+                android:layout_weight="1">
+
+                <ImageView
+                    android:id="@+id/yellowBookSwitchImageView"
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:adjustViewBounds="true"
+                    android:contentDescription="@string/yellow_book_switch"
+                    android:src="@drawable/switch_yellow_true"
+                    app:layout_constraintBottom_toBottomOf="parent"
+                    app:layout_constraintEnd_toEndOf="parent"
+                    app:layout_constraintStart_toStartOf="parent"
+                    app:layout_constraintTop_toTopOf="parent" />
+
+                <Button
+                    android:id="@+id/yellowBookSwitchTrueButton"
+                    android:layout_width="0dp"
+                    android:layout_height="0dp"
+                    android:background="@color/transparency"
+                    app:layout_constraintBottom_toBottomOf="@id/yellowBookSwitchImageView"
+                    app:layout_constraintStart_toStartOf="@id/yellowBookSwitchImageView"
+                    app:layout_constraintTop_toTopOf="@id/yellowBookSwitchImageView"
+                    app:layout_constraintWidth_percent="0.5" />
+
+                <Button
+                    android:id="@+id/yellowBookSwitchFalseButton"
+                    android:layout_width="0dp"
+                    android:layout_height="0dp"
+                    android:background="@color/transparency"
+                    app:layout_constraintBottom_toBottomOf="@id/yellowBookSwitchImageView"
+                    app:layout_constraintEnd_toEndOf="@id/yellowBookSwitchImageView"
+                    app:layout_constraintTop_toTopOf="@id/yellowBookSwitchImageView"
+                    app:layout_constraintWidth_percent="0.5" />
+            </androidx.constraintlayout.widget.ConstraintLayout>
+        </LinearLayout>
+
+        <ImageButton
+            android:id="@+id/zoomedStorageClosetSubmitButton"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:adjustViewBounds="true"
+            android:background="@color/transparency"
+            android:contentDescription="@string/submit_buzzer"
+            android:scaleType="centerInside"
+            app:layout_constraintWidth_percent="0.14"
+            android:layout_marginBottom="2dp"
+            app:layout_constraintHorizontal_bias="0.95"
+            android:src="@drawable/submit_buzzer"
+            app:layout_constraintBottom_toBottomOf="@id/zoomedStorageClosetBottomGuideline"
+            app:layout_constraintEnd_toEndOf="@id/zoomedStorageClosetEndGuideline"
+            app:layout_constraintStart_toEndOf="@id/lowerSwitchesLinearLayout" />
+    </androidx.constraintlayout.widget.ConstraintLayout>
+
+    <include
+        android:id="@+id/storageClosetBaseNavigation"
+        layout="@layout/layout_base_navigation"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent" />
+
+</androidx.constraintlayout.widget.ConstraintLayout>
