@@ -18,6 +18,16 @@
     <color name="intro_white">#FFFDE8</color>
     <color name="transparency">#00000000</color>
     <color name="transparency_indicator">#66FF0000</color>
+
+    <color name="blue_book">#006EE0</color>
+    <color name="blue_book_dark">#385274</color>
+    <color name="green_book">#006000</color>
+    <color name="brown_book">#8E6046</color>
+    <color name="yellow_book">#E0AC00</color>
+    <color name="red_book">#A40000</color>
+
+    <color name="slightly_dim">#4D000000</color>
+    <color name="too_dim">#B3000000</color>
     
     <color name="number_key_pad_grey">#1d2228</color>
     <color name="number_key_grey">#2a3139</color>

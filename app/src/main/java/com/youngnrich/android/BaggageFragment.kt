@@ -122,7 +122,6 @@ class BaggageFragment : Fragment() {
     }
 
     private fun numberClicked(view: View) {
-        // todo
         numberClickedCount++
 
         val numberString = (view as? AppCompatButton)?.text?.toString() ?: ""

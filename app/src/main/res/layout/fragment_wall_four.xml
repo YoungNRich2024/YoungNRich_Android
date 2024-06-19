@@ -85,13 +85,49 @@
             android:layout_marginStart="20dp"
             android:adjustViewBounds="true"
             android:background="@color/transparency"
-            android:contentDescription="@string/baggage" />
             android:contentDescription="@string/baggage"
             android:scaleType="centerInside"
             android:src="@drawable/baggage_bright"
             app:layout_constraintBottom_toBottomOf="@id/wallFourBottomGuideline"
             app:layout_constraintStart_toStartOf="@id/wallFourLampStartGuideline"
             app:layout_constraintTop_toTopOf="@id/wallFourBottomGuideline" />
+
+        <ImageView
+            android:id="@+id/wallFourSlightlyDimImageView"
+            android:layout_width="0dp"
+            android:layout_height="0dp"
+            android:contentDescription="@string/slightly_dim_room"
+            android:src="@color/slightly_dim"
+            android:visibility="gone"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent" />
+
+        <ImageView
+            android:id="@+id/wallFourTooDimImageView"
+            android:layout_width="0dp"
+            android:layout_height="0dp"
+            android:contentDescription="@string/too_dim_room"
+            android:src="@color/too_dim"
+            android:visibility="gone"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent" />
+
+        <ImageView
+            android:id="@+id/windowImportantHintImageView"
+            android:layout_width="0dp"
+            android:layout_height="0dp"
+            android:contentDescription="@string/window_important_hint"
+            android:padding="60dp"
+            android:src="@drawable/window_important_hint"
+            android:visibility="gone"
+            app:layout_constraintBottom_toBottomOf="@id/windowImageButton"
+            app:layout_constraintEnd_toEndOf="@id/windowImageButton"
+            app:layout_constraintStart_toStartOf="@id/windowImageButton"
+            app:layout_constraintTop_toTopOf="@id/windowImageButton" />
 
     </androidx.constraintlayout.widget.ConstraintLayout>
 </HorizontalScrollView>
