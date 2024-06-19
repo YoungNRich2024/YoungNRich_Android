@@ -52,7 +52,8 @@ class WallFourFragment : Fragment() {
             baggageImageButton.setOnClickListener {
                 Log.d(TAG, "Baggage is CLICKED!!!")
 
-                // TODO: 퍼즐 3의 문제지를 인벤토리에 집어넣기 & 버튼 비활성 처리
+                // 퍼즐 3의 문제지와 비밀번호 입력기가 들어있는 가방 fragment 열기
+                secondRoomGameActivity.openFragment(BaggageFragment.newInstance())
             }
         }
     }

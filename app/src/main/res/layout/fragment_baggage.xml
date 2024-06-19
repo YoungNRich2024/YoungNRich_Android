@@ -1,0 +1,331 @@
+<?xml version="1.0" encoding="utf-8"?>
+<FrameLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@drawable/floor_background"
+    android:clickable="true"
+    android:focusable="true"
+    tools:context=".BaggageFragment">
+
+    <androidx.constraintlayout.widget.ConstraintLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent">
+
+        <androidx.constraintlayout.widget.Guideline
+            android:id="@+id/baggageMiddleGuideline"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:orientation="vertical"
+            app:layout_constraintGuide_percent="0.47" />
+
+        <androidx.constraintlayout.widget.ConstraintLayout
+            android:layout_width="wrap_content"
+            android:layout_height="0dp"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintEnd_toEndOf="@id/baggageMiddleGuideline"
+            app:layout_constraintHeight_percent="0.90"
+            app:layout_constraintStart_toStartOf="@id/baggageMiddleGuideline"
+            app:layout_constraintTop_toTopOf="parent">
+
+            <ImageView
+                android:id="@+id/zoomedBaggageImageView"
+                android:layout_width="wrap_content"
+                android:layout_height="match_parent"
+                android:adjustViewBounds="true"
+                android:contentDescription="@string/zoomed_baggage"
+                android:scaleType="fitCenter"
+                android:src="@drawable/zoomed_baggage"
+                app:layout_constraintBottom_toBottomOf="parent"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintHorizontal_bias="0.2"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toTopOf="parent" />
+
+            <androidx.constraintlayout.widget.Guideline
+                android:id="@+id/baggageTopGuideline"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:orientation="horizontal"
+                app:layout_constraintGuide_percent="0.10" />
+
+            <androidx.constraintlayout.widget.Guideline
+                android:id="@+id/baggageBottomGuideline"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:orientation="horizontal"
+                app:layout_constraintGuide_percent="0.90" />
+
+            <androidx.constraintlayout.widget.Guideline
+                android:id="@+id/leftBaggageStartGuideline"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:orientation="vertical"
+                app:layout_constraintGuide_percent="0.16" />
+
+            <androidx.constraintlayout.widget.Guideline
+                android:id="@+id/leftBaggageEndGuideline"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:orientation="vertical"
+                app:layout_constraintGuide_percent="0.505" />
+
+            <androidx.constraintlayout.widget.Guideline
+                android:id="@+id/rightBaggageStartGuideline"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:orientation="vertical"
+                app:layout_constraintGuide_percent="0.583" />
+
+            <androidx.constraintlayout.widget.Guideline
+                android:id="@+id/rightBaggageEndGuideline"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:orientation="vertical"
+                app:layout_constraintGuide_percent="0.924" />
+
+            <ImageButton
+                android:id="@+id/puzzle3SheetsImageButton"
+                android:layout_width="wrap_content"
+                android:layout_height="0dp"
+                android:adjustViewBounds="true"
+                android:background="@color/transparency"
+                android:contentDescription="@string/puzzle_3_sheets"
+                android:padding="8dp"
+                android:scaleType="fitCenter"
+                android:src="@drawable/puzzle_3_sheets"
+                app:layout_constraintBottom_toBottomOf="@id/baggageBottomGuideline"
+                app:layout_constraintEnd_toEndOf="@id/leftBaggageEndGuideline"
+                app:layout_constraintStart_toStartOf="@id/leftBaggageStartGuideline"
+                app:layout_constraintTop_toTopOf="@id/baggageTopGuideline" />
+
+            <androidx.constraintlayout.widget.ConstraintLayout
+                android:layout_width="0dp"
+                android:layout_height="0dp"
+                app:layout_constraintBottom_toBottomOf="@id/baggageBottomGuideline"
+                app:layout_constraintEnd_toEndOf="@id/rightBaggageEndGuideline"
+                app:layout_constraintStart_toStartOf="@id/rightBaggageStartGuideline"
+                app:layout_constraintTop_toTopOf="@id/baggageTopGuideline">
+
+                <ImageView
+                    android:id="@+id/keyPadImageView"
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:contentDescription="@string/key_pad"
+                    android:src="@drawable/number_key_pad"
+                    app:layout_constraintBottom_toBottomOf="parent"
+                    app:layout_constraintEnd_toEndOf="parent"
+                    app:layout_constraintStart_toStartOf="parent"
+                    app:layout_constraintTop_toTopOf="parent" />
+
+                <androidx.constraintlayout.widget.ConstraintLayout
+                    android:layout_width="0dp"
+                    android:layout_height="0dp"
+                    android:layout_margin="12dp"
+                    app:layout_constraintBottom_toBottomOf="@id/keyPadImageView"
+                    app:layout_constraintEnd_toEndOf="@id/keyPadImageView"
+                    app:layout_constraintStart_toStartOf="@id/keyPadImageView"
+                    app:layout_constraintTop_toTopOf="@id/keyPadImageView">
+
+                    <androidx.constraintlayout.helper.widget.Flow
+                        android:id="@+id/keyPadFlow"
+                        android:layout_width="0dp"
+                        android:layout_height="0dp"
+                        app:constraint_referenced_ids="button1, button2, button3, button4, button5, button6, button7, button8, button9, buttonDelete"
+                        app:flow_horizontalGap="5dp"
+                        app:flow_maxElementsWrap="3"
+                        app:flow_verticalGap="6dp"
+                        app:flow_wrapMode="chain"
+                        app:layout_constraintBottom_toBottomOf="parent"
+                        app:layout_constraintEnd_toEndOf="parent"
+                        app:layout_constraintHeight_percent="0.50"
+                        app:layout_constraintStart_toStartOf="parent"
+                        app:layout_constraintTop_toTopOf="parent"
+                        app:layout_constraintVertical_bias="1"
+                        app:layout_constraintWidth_percent="0.85" />
+
+                    <TextView
+                        android:id="@+id/passwordMessageTextView"
+                        android:layout_width="0dp"
+                        android:layout_height="0dp"
+                        android:fontFamily="@font/gowunbatang_bold"
+                        android:gravity="center"
+                        android:text="@string/password_message"
+                        android:textColor="@color/password_message_grey"
+                        android:textSize="11sp"
+                        app:layout_constraintEnd_toEndOf="parent"
+                        app:layout_constraintHeight_percent="0.12"
+                        app:layout_constraintStart_toStartOf="parent"
+                        app:layout_constraintTop_toTopOf="parent" />
+
+                    <LinearLayout
+                        android:id="@+id/passwordLinearLayout"
+                        android:layout_width="0dp"
+                        android:layout_height="wrap_content"
+                        android:orientation="horizontal"
+                        app:layout_constraintBottom_toTopOf="@id/puzzle3ResultConstraintLayout"
+                        app:layout_constraintEnd_toEndOf="parent"
+                        app:layout_constraintStart_toStartOf="parent"
+                        app:layout_constraintTop_toBottomOf="@id/passwordMessageTextView"
+                        app:layout_constraintWidth_percent="0.75">
+
+                        <FrameLayout style="@style/passwordDigit">
+
+                            <ImageView
+                                android:layout_width="match_parent"
+                                android:layout_height="match_parent"
+                                android:importantForAccessibility="no"
+                                android:src="@drawable/digit_background" />
+
+                            <TextView
+                                android:id="@+id/passwordDigit1TextView"
+                                style="@style/passwordDigitText"
+                                tools:text="4" />
+                        </FrameLayout>
+
+                        <FrameLayout style="@style/passwordDigit">
+
+                            <ImageView
+                                android:layout_width="match_parent"
+                                android:layout_height="match_parent"
+                                android:importantForAccessibility="no"
+                                android:src="@drawable/digit_background" />
+
+                            <TextView
+                                android:id="@+id/passwordDigit2TextView"
+                                style="@style/passwordDigitText"
+                                tools:text="1" />
+                        </FrameLayout>
+
+                        <FrameLayout style="@style/passwordDigit">
+
+                            <ImageView
+                                android:layout_width="match_parent"
+                                android:layout_height="match_parent"
+                                android:importantForAccessibility="no"
+                                android:src="@drawable/digit_background" />
+
+                            <TextView
+                                android:id="@+id/passwordDigit3TextView"
+                                style="@style/passwordDigitText"
+                                tools:text="4" />
+                        </FrameLayout>
+
+                        <FrameLayout style="@style/passwordDigit">
+
+                            <ImageView
+                                android:layout_width="match_parent"
+                                android:layout_height="match_parent"
+                                android:importantForAccessibility="no"
+                                android:src="@drawable/digit_background" />
+
+                            <TextView
+                                android:id="@+id/passwordDigit4TextView"
+                                style="@style/passwordDigitText"
+                                tools:text="1" />
+                        </FrameLayout>
+                    </LinearLayout>
+
+                    <androidx.constraintlayout.widget.ConstraintLayout
+                        android:id="@+id/puzzle3ResultConstraintLayout"
+                        android:layout_width="match_parent"
+                        android:layout_height="0dp"
+                        app:layout_constraintBottom_toTopOf="@id/keyPadFlow"
+                        app:layout_constraintEnd_toEndOf="parent"
+                        app:layout_constraintHeight_percent="0.105"
+                        app:layout_constraintStart_toStartOf="parent"
+                        app:layout_constraintTop_toBottomOf="@id/passwordLinearLayout">
+
+                        <ImageView
+                            android:id="@+id/puzzle3ResultImageView"
+                            android:layout_width="0dp"
+                            android:layout_height="0dp"
+                            android:contentDescription="@string/puzzle_3_result"
+                            android:src="@color/dark_blue"
+                            app:layout_constraintBottom_toBottomOf="parent"
+                            app:layout_constraintEnd_toEndOf="parent"
+                            app:layout_constraintStart_toStartOf="parent"
+                            app:layout_constraintTop_toTopOf="parent"
+                            app:layout_constraintWidth_percent="0.7" />
+
+                        <TextView
+                            android:id="@+id/puzzle3ResultTextView"
+                            style="@style/puzzle3Result"
+                            android:text="@string/puzzle_3_ing"
+                            android:textColor="@color/puzzle_3_ing_blue"
+                            tools:ignore="MissingConstraints" />
+                    </androidx.constraintlayout.widget.ConstraintLayout>
+
+
+                    <androidx.appcompat.widget.AppCompatButton
+                        android:id="@+id/button1"
+                        style="@style/numberKey"
+                        android:text="1"
+                        tools:ignore="MissingConstraints" />
+
+                    <androidx.appcompat.widget.AppCompatButton
+                        android:id="@+id/button2"
+                        style="@style/numberKey"
+                        android:text="2"
+                        tools:ignore="MissingConstraints" />
+
+                    <androidx.appcompat.widget.AppCompatButton
+                        android:id="@+id/button3"
+                        style="@style/numberKey"
+                        android:text="3"
+                        tools:ignore="MissingConstraints" />
+
+                    <androidx.appcompat.widget.AppCompatButton
+                        android:id="@+id/button4"
+                        style="@style/numberKey"
+                        android:text="4"
+                        tools:ignore="MissingConstraints" />
+
+                    <androidx.appcompat.widget.AppCompatButton
+                        android:id="@+id/button5"
+                        style="@style/numberKey"
+                        android:text="5"
+                        tools:ignore="MissingConstraints" />
+
+                    <androidx.appcompat.widget.AppCompatButton
+                        android:id="@+id/button6"
+                        style="@style/numberKey"
+                        android:text="6"
+                        tools:ignore="MissingConstraints" />
+
+                    <androidx.appcompat.widget.AppCompatButton
+                        android:id="@+id/button7"
+                        style="@style/numberKey"
+                        android:text="7"
+                        tools:ignore="MissingConstraints" />
+
+                    <androidx.appcompat.widget.AppCompatButton
+                        android:id="@+id/button8"
+                        style="@style/numberKey"
+                        android:text="8"
+                        tools:ignore="MissingConstraints" />
+
+                    <androidx.appcompat.widget.AppCompatButton
+                        android:id="@+id/button9"
+                        style="@style/numberKey"
+                        android:text="9"
+                        tools:ignore="MissingConstraints" />
+
+                    <androidx.appcompat.widget.AppCompatButton
+                        android:id="@+id/buttonDelete"
+                        style="@style/deleteKeypad"
+                        android:text="DELETE"
+                        tools:ignore="MissingConstraints" />
+
+                </androidx.constraintlayout.widget.ConstraintLayout>
+            </androidx.constraintlayout.widget.ConstraintLayout>
+        </androidx.constraintlayout.widget.ConstraintLayout>
+    </androidx.constraintlayout.widget.ConstraintLayout>
+
+    <include
+        android:id="@+id/baggageBaseNavigation"
+        layout="@layout/layout_base_navigation"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent" />
+</FrameLayout>

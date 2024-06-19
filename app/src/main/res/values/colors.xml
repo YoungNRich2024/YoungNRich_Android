@@ -18,4 +18,11 @@
     <color name="intro_white">#FFFDE8</color>
     <color name="transparency">#00000000</color>
     <color name="transparency_indicator">#66FF0000</color>
+    
+    <color name="number_key_pad_grey">#1d2228</color>
+    <color name="number_key_grey">#2a3139</color>
+    <color name="password_message_grey">#a5a7b0</color>
+    <color name="puzzle_3_fail_red">#ff002e</color>
+    <color name="puzzle_3_success_green">#14f904</color>
+    <color name="puzzle_3_ing_blue">#008cff</color>
 </resources>
