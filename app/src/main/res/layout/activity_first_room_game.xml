@@ -96,7 +96,7 @@
 
                 <ImageButton
                     android:id="@+id/ipadImageButton"
-                    android:layout_width="88dp"
+                    android:layout_width="76dp"
                     android:layout_height="wrap_content"
                     android:adjustViewBounds="true"
                     android:background="@color/transparency"
@@ -140,7 +140,7 @@
                     android:layout_height="0dp"
                     android:background="@color/transparency"
                     android:contentDescription="@string/pillow"
-                    android:src="@color/transparency_indicator"
+                    android:src="@color/transparency"
                     app:layout_constraintBottom_toBottomOf="@id/pillowBottomGuideline"
                     app:layout_constraintEnd_toEndOf="@id/pillowEndGuideline"
                     app:layout_constraintStart_toStartOf="@id/pillowStartGuideline"
@@ -179,7 +179,7 @@
                     android:layout_width="0dp"
                     android:layout_height="0dp"
                     android:contentDescription="@string/picture_frame"
-                    android:src="@color/transparency_indicator"
+                    android:src="@color/transparency"
                     app:layout_constraintBottom_toBottomOf="@id/pictureFrameBottomGuideline"
                     app:layout_constraintEnd_toEndOf="@id/pictureFrameEndGuideline"
                     app:layout_constraintStart_toStartOf="@id/pictureFrameStartGuideline"
