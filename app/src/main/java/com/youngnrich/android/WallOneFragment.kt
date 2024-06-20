@@ -106,10 +106,22 @@ class WallOneFragment : Fragment() {
                 // TODO: 라디오를 확대한 fragment 열기
             }
 
-            financialStatementsImageButton.setOnClickListener {
-                Log.d(TAG, "Financial Statements are CLICKED!!!")
+            val isFinancialStatementsCollected = sharedSecondRoomGameViewModel.isFinancialStatementsCollected
+            if (isFinancialStatementsCollected)
+                financialStatementsImageButton.visibility = View.GONE
+            else {
+                financialStatementsImageButton.setOnClickListener {
+                    Log.d(TAG, "Financial Statements are CLICKED!!!")
 
-                // TODO: 재무제표를 확대한 fragment 열기?
+                    // 재무제표에 대한 내용이 담긴 다이얼로그 띄우기
+                    secondRoomGameActivity.showCommonDialog(GameItem.FINANCIAL_STATEMENTS)
+
+                    // 인벤토리에 재무제표 넣기
+                    secondRoomGameActivity.putItemIntoInventory(GameItem.FINANCIAL_STATEMENTS)
+
+                    financialStatementsImageButton.visibility = View.GONE
+                    sharedSecondRoomGameViewModel.isFinancialStatementsCollected = true
+                }
             }
         }
     }

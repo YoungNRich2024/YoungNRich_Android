@@ -89,18 +89,18 @@
             android:orientation="horizontal"
             app:layout_constraintGuide_percent="0.60" />
 
-        <ImageButton
-            android:id="@+id/financialStatementsImageButton"
-            android:layout_width="wrap_content"
-            android:layout_height="0dp"
-            android:src="@drawable/financial_statements_bright"
-            android:scaleType="centerInside"
-            android:background="@color/transparency"
-            android:adjustViewBounds="true"
-            app:layout_constraintTop_toTopOf="@id/wallOneFinancialStatementsTopGuideline"
-            app:layout_constraintBottom_toBottomOf="@id/wallOneFinancialStatementsBottomGuideline"
-            app:layout_constraintStart_toEndOf="@id/bookshelfImageButton"
-            android:layout_marginStart="8dp"
-            android:contentDescription="@string/radio_table" />
-    </androidx.constraintlayout.widget.ConstraintLayout>
-</HorizontalScrollView>
+            <ImageButton
+                android:id="@+id/financialStatementsImageButton"
+                android:layout_width="wrap_content"
+                android:layout_height="0dp"
+                android:layout_marginStart="8dp"
+                android:adjustViewBounds="true"
+                android:background="@color/transparency"
+                android:contentDescription="@string/financial_statements"
+                android:scaleType="centerInside"
+                android:src="@drawable/financial_statements_bright"
+                app:layout_constraintBottom_toBottomOf="@id/wallOneFinancialStatementsBottomGuideline"
+                app:layout_constraintStart_toEndOf="@id/bookshelfConstraintLayout"
+                app:layout_constraintTop_toTopOf="@id/wallOneFinancialStatementsTopGuideline" />
+        </androidx.constraintlayout.widget.ConstraintLayout>
+    </HorizontalScrollView>
