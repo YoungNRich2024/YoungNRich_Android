@@ -235,7 +235,7 @@ class FirstRoomGameActivity : BaseGameActivity() {
     private fun openFragment(fragment: Fragment) {
         supportFragmentManager
             .beginTransaction()
-            .add(R.id.fragment_container_view, fragment)
+            .add(R.id.first_room_fragment_container_view, fragment)
             .addToBackStack(null)
             .commit()
     }
