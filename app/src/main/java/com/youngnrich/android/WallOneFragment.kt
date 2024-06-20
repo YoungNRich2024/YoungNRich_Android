@@ -41,11 +41,15 @@ class WallOneFragment : Fragment() {
     override fun onViewCreated(view: View, savedInstanceState: Bundle?) {
         super.onViewCreated(view, savedInstanceState)
 
-        binding.apply {
-            bookshelfImageButton.setOnClickListener {
-                Log.d(TAG, "Bookshelf is CLICKED!!!")
+        changeRoomIllumination()
 
-                // TODO: 책장의 위 2칸 확대한 fragment 열기
+        binding.apply {
+
+            upperBookshelfImageButton.setOnClickListener {
+                Log.d(TAG, "Upper part of Bookshelf is CLICKED!!!")
+
+                // 책장의 위 2칸 확대한 fragment 열기
+                secondRoomGameActivity.openFragment(BookShelfFragment.newInstance())
             }
 
             if (sharedSecondRoomGameViewModel.isStorageClosetOpened) {
@@ -140,4 +144,20 @@ class WallOneFragment : Fragment() {
         binding.storageClosetImageButton.startAnimation(rattlingAnimation)
     }
 
+    private fun changeRoomIllumination() {
+        val lamp = sharedSecondRoomGameViewModel.isLampOn
+        val window = sharedSecondRoomGameViewModel.isWindowOpen
+        binding.apply {
+            if (lamp && window) {
+                wallOneSlightlyDimImageView.visibility = View.GONE
+                wallOneTooDimImageView.visibility = View.GONE
+            } else if (lamp || window) {
+                wallOneSlightlyDimImageView.visibility = View.VISIBLE
+                wallOneTooDimImageView.visibility = View.GONE
+            } else {
+                wallOneSlightlyDimImageView.visibility = View.GONE
+                wallOneTooDimImageView.visibility = View.VISIBLE
+            }
+        }
+    }
 }
