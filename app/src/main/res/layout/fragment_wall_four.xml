@@ -34,15 +34,15 @@
             android:id="@+id/windowImageButton"
             android:layout_width="wrap_content"
             android:layout_height="0dp"
-            app:layout_constraintStart_toStartOf="parent"
-            app:layout_constraintEnd_toEndOf="parent"
-            app:layout_constraintTop_toTopOf="@id/wallFourTopGuideline"
-            app:layout_constraintBottom_toBottomOf="@id/wallFourBottomGuideline"
-            android:src="@drawable/window_open"
-            android:scaleType="centerInside"
             android:adjustViewBounds="true"
             android:background="@color/transparency"
-            android:contentDescription="@string/window" />
+            android:contentDescription="@string/window"
+            android:scaleType="centerInside"
+            android:src="@drawable/window_open"
+            app:layout_constraintBottom_toBottomOf="@id/wallFourBottomGuideline"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="@id/wallFourTopGuideline" />
 
         <androidx.constraintlayout.widget.Guideline
             android:id="@+id/wallFourLampStartGuideline"
@@ -69,14 +69,14 @@
             android:id="@+id/lampImageButton"
             android:layout_width="wrap_content"
             android:layout_height="0dp"
-            app:layout_constraintStart_toStartOf="@id/wallFourLampStartGuideline"
-            app:layout_constraintTop_toTopOf="@id/wallFourLampTopGuideline"
-            app:layout_constraintBottom_toBottomOf="@id/wallFourBottomGuideline"
-            android:src="@drawable/lamp_bright"
-            android:scaleType="centerInside"
             android:adjustViewBounds="true"
             android:background="@color/transparency"
-            android:contentDescription="@string/lamp" />
+            android:contentDescription="@string/lamp"
+            android:scaleType="centerInside"
+            android:src="@drawable/lamp_bright"
+            app:layout_constraintBottom_toBottomOf="@id/wallFourBottomGuideline"
+            app:layout_constraintStart_toStartOf="@id/wallFourLampStartGuideline"
+            app:layout_constraintTop_toTopOf="@id/wallFourLampTopGuideline" />
 
         <ImageButton
             android:id="@+id/baggageImageButton"
