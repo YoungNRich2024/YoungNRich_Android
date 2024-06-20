@@ -29,7 +29,7 @@ class WallFourFragment : Fragment() {
     override fun onCreateView(
         inflater: LayoutInflater, container: ViewGroup?,
         savedInstanceState: Bundle?
-    ): View? {
+    ): View {
         Log.d(TAG, "you're now in Wall 4")
 
         _binding = FragmentWallFourBinding.inflate(inflater, container, false)

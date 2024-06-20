@@ -31,6 +31,7 @@ class IpadFragment : Fragment() {
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
 
+        Log.d(TAG, "$TAG is open")
     }
 
     override fun onCreateView(
