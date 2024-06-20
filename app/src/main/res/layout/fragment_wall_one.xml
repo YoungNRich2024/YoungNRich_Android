@@ -62,18 +62,18 @@
                 app:layout_constraintBottom_toTopOf="@id/wallOneBottomGuideline"
                 app:layout_constraintEnd_toStartOf="@id/bookshelfConstraintLayout" />
 
-        <ImageButton
-            android:id="@+id/radioTableImageButton"
-            android:layout_width="wrap_content"
-            android:layout_height="112dp"
-            android:src="@drawable/radio_table_bright"
-            android:scaleType="centerInside"
-            android:background="@color/transparency"
-            android:adjustViewBounds="true"
-            app:layout_constraintStart_toEndOf="@id/bookshelfImageButton"
-            app:layout_constraintBottom_toTopOf="@id/wallOneBottomGuideline"
-            android:layout_marginStart="8dp"
-            android:contentDescription="@string/radio_table" />
+            <ImageButton
+                android:id="@+id/radioTableImageButton"
+                android:layout_width="wrap_content"
+                android:layout_height="112dp"
+                android:layout_marginStart="8dp"
+                android:adjustViewBounds="true"
+                android:background="@color/transparency"
+                android:contentDescription="@string/radio_table"
+                android:scaleType="centerInside"
+                android:src="@drawable/radio_table_bright"
+                app:layout_constraintBottom_toTopOf="@id/wallOneBottomGuideline"
+                app:layout_constraintStart_toEndOf="@id/bookshelfConstraintLayout" />
 
         <androidx.constraintlayout.widget.Guideline
             android:id="@+id/wallOneFinancialStatementsTopGuideline"

@@ -1,0 +1,117 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@drawable/zoomed_background"
+    android:clickable="true"
+    android:focusable="true"
+    tools:context=".RadioFragment">
+
+    <FrameLayout
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent">
+
+        <androidx.constraintlayout.widget.ConstraintLayout
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content">
+
+            <androidx.constraintlayout.widget.Guideline
+                android:id="@+id/radioButtonsTopGuideline"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:orientation="horizontal"
+                app:layout_constraintGuide_percent="0.225" />
+
+            <androidx.constraintlayout.widget.Guideline
+                android:id="@+id/radioButtonsBottomGuideline"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:orientation="horizontal"
+                app:layout_constraintGuide_percent="0.42" />
+
+            <androidx.constraintlayout.widget.Guideline
+                android:id="@+id/playButtonStartGuideline"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:orientation="vertical"
+                app:layout_constraintGuide_percent="0.124" />
+
+            <androidx.constraintlayout.widget.Guideline
+                android:id="@+id/stopButtonStartGuideline"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:orientation="vertical"
+                app:layout_constraintGuide_percent="0.227" />
+
+            <androidx.constraintlayout.widget.Guideline
+                android:id="@+id/backWindButtonStartGuideline"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:orientation="vertical"
+                app:layout_constraintGuide_percent="0.328" />
+
+            <androidx.constraintlayout.widget.Guideline
+                android:id="@+id/backWindButtonEndGuideline"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:orientation="vertical"
+                app:layout_constraintGuide_percent="0.435" />
+
+            <ImageView
+                android:id="@+id/zoomedRadioImageView"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:adjustViewBounds="true"
+                android:contentDescription="@string/zoomed_radio"
+                android:src="@drawable/zoomed_radio"
+                app:layout_constraintBottom_toBottomOf="parent"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toTopOf="parent" />
+
+            <Button
+                android:id="@+id/radioPlayButton"
+                android:layout_width="0dp"
+                android:layout_height="0dp"
+                android:background="@color/transparency"
+                android:contentDescription="@string/radio_play_button"
+                app:layout_constraintBottom_toBottomOf="@id/radioButtonsBottomGuideline"
+                app:layout_constraintEnd_toEndOf="@id/stopButtonStartGuideline"
+                app:layout_constraintStart_toStartOf="@id/playButtonStartGuideline"
+                app:layout_constraintTop_toTopOf="@id/radioButtonsTopGuideline" />
+
+            <Button
+                android:id="@+id/radioStopButton"
+                android:layout_width="0dp"
+                android:layout_height="0dp"
+                android:background="@color/transparency"
+                android:contentDescription="@string/radio_stop_button"
+                app:layout_constraintBottom_toBottomOf="@id/radioButtonsBottomGuideline"
+                app:layout_constraintEnd_toEndOf="@id/backWindButtonStartGuideline"
+                app:layout_constraintStart_toStartOf="@id/stopButtonStartGuideline"
+                app:layout_constraintTop_toTopOf="@id/radioButtonsTopGuideline" />
+
+            <Button
+                android:id="@+id/radioBackWindButton"
+                android:layout_width="0dp"
+                android:layout_height="0dp"
+                android:background="@color/transparency"
+                android:contentDescription="@string/radio_back_wind_button"
+                app:layout_constraintBottom_toBottomOf="@id/radioButtonsBottomGuideline"
+                app:layout_constraintEnd_toEndOf="@id/backWindButtonEndGuideline"
+                app:layout_constraintStart_toStartOf="@id/backWindButtonStartGuideline"
+                app:layout_constraintTop_toTopOf="@id/radioButtonsTopGuideline" />
+        </androidx.constraintlayout.widget.ConstraintLayout>
+    </FrameLayout>
+
+    <include
+        android:id="@+id/radioBaseNavigation"
+        layout="@layout/layout_base_navigation"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent" />
+
+</androidx.constraintlayout.widget.ConstraintLayout>

@@ -103,7 +103,8 @@ class WallOneFragment : Fragment() {
             radioTableImageButton.setOnClickListener {
                 Log.d(TAG, "Radio is CLICKED!!!")
 
-                // TODO: 라디오를 확대한 fragment 열기
+                // 라디오를 확대한 fragment 열기
+                secondRoomGameActivity.openFragment(RadioFragment.newInstance())
             }
 
             val isFinancialStatementsCollected = sharedSecondRoomGameViewModel.isFinancialStatementsCollected
