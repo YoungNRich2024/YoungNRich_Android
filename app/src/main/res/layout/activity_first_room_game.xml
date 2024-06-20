@@ -75,7 +75,7 @@
                     android:background="@color/transparency"
                     android:contentDescription="@string/television_on"
                     android:scaleType="fitCenter"
-                    android:src="@drawable/television_on"
+                    android:src="@drawable/television_off"
                     app:layout_constraintBottom_toBottomOf="parent"
                     app:layout_constraintEnd_toEndOf="@id/tvEndGuideline"
                     app:layout_constraintStart_toStartOf="@id/tvStartGuideline" />

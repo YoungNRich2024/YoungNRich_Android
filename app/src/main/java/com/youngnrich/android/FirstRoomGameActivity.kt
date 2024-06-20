@@ -18,6 +18,7 @@ import com.youngnrich.android.GameItem.PILLOW
 import com.youngnrich.android.GameItem.REMOTE_CONTROLLER
 import com.youngnrich.android.GameItem.TELEVISION
 import com.youngnrich.android.databinding.ActivityFirstRoomGameBinding
+import com.youngnrich.android.viewmodels.YNRViewModel
 
 private const val TAG = "FirstRoomGameActivity"
 
@@ -83,27 +84,38 @@ class FirstRoomGameActivity : BaseGameActivity() {
 
         binding.apply {
 
+            if (ynrViewModel.isTvOn) {
+                televisionImageButton.setImageResource(R.drawable.television_on)
+            }
+
             televisionImageButton.setOnClickListener {
                 Log.d(TAG, "TV is clicked!!!!!")
 
                 val necessaryItem = REMOTE_CONTROLLER
-                if (!ynrViewModel.inventoryItems.contains(necessaryItem)) {
-                    Log.d(TAG, "NO remote controller!!!! Take it FIRST")
-
-                    // 리모콘이 필요하다는 듯한 멘트가 담긴 다이얼로그 출력
-                    showCommonDialog(TELEVISION)
-                } else {
-                    // 인벤토리 안의 Remote Controller 클릭 후 곧바로 televisionImageButton 을 클릭했다면 => TvFragment 열기
+                if (ynrViewModel.inventoryItems.contains(necessaryItem)) {
+                    // 인벤토리 안의 Remote Controller 클릭 후 곧바로 televisionImageButton 을 클릭했다면 => Tv ON 상태로 이미지 바꾸기
                     if (REMOTE_CONTROLLER.isSelected) {
-                        Log.d(TAG, "YES remote controller!!!! TV is gonna turn ON -- open TvFragment")
+                        Log.d(TAG, "YES remote controller!!!! TV is gonna turn ON")
+
+                        televisionImageButton.setImageResource(R.drawable.television_on)
+                        ynrViewModel.isTvOn = true
 
                         REMOTE_CONTROLLER.isSelected = false
 
                         inactivateSlotButtonUI()
-
-                        openFragment(TvFragment.newInstance())
+                        removeItemFromInventory(REMOTE_CONTROLLER)
                     } else {
                         Log.d(TAG, "WITH the Remote Controller in Inventory, please!!!")
+                    }
+                } else {
+                    if (ynrViewModel.isTvOn) {
+                        Log.d(TAG, "TvFragment is gonna OPEN!!!")
+                        openFragment(TvFragment.newInstance())
+                    } else {
+                        Log.d(TAG, "NO remote controller!!!! Take it FIRST")
+
+                        // 리모콘이 필요하다는 듯한 멘트가 담긴 다이얼로그 출력
+                        showCommonDialog(TELEVISION)
                     }
                 }
             }
