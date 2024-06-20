@@ -157,6 +157,8 @@ class WallOneFragment : Fragment() {
             } else {
                 wallOneSlightlyDimImageView.visibility = View.GONE
                 wallOneTooDimImageView.visibility = View.VISIBLE
+
+                bookImportantHintImageView.visibility = View.VISIBLE
             }
         }
     }

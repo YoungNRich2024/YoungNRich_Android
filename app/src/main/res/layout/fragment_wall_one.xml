@@ -1,177 +1,220 @@
 <?xml version="1.0" encoding="utf-8"?>
-<FrameLayout xmlns:android="http://schemas.android.com/apk/res/android"
+<HorizontalScrollView xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:app="http://schemas.android.com/apk/res-auto"
     android:layout_width="match_parent"
     android:layout_height="match_parent">
 
-    <HorizontalScrollView
-        android:layout_width="match_parent"
+    <androidx.constraintlayout.widget.ConstraintLayout
+        android:layout_width="wrap_content"
         android:layout_height="match_parent">
 
-        <androidx.constraintlayout.widget.ConstraintLayout
+        <ImageView
+            android:id="@+id/wallOneBackgroundImageView"
             android:layout_width="wrap_content"
-            android:layout_height="match_parent">
+            android:layout_height="match_parent"
+            android:adjustViewBounds="true"
+            android:contentDescription="@string/wall_one_background"
+            android:scaleType="fitCenter"
+            android:src="@drawable/wall_one_background_bright"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent" />
+
+        <androidx.constraintlayout.widget.Guideline
+            android:id="@+id/wallOneBottomGuideline"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal"
+            app:layout_constraintGuide_percent="0.96" />
+
+        <androidx.constraintlayout.widget.Guideline
+            android:id="@+id/wallOneTopGuideline"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal"
+            app:layout_constraintGuide_percent="0.07" />
+
+        <androidx.constraintlayout.widget.ConstraintLayout
+            android:id="@+id/bookshelfConstraintLayout"
+            android:layout_width="wrap_content"
+            android:layout_height="0dp"
+            app:layout_constraintBottom_toBottomOf="@id/wallOneBottomGuideline"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="@id/wallOneTopGuideline">
 
             <ImageView
-                android:id="@+id/wallOneBackgroundImageView"
+                android:id="@+id/bookshelfImageView"
                 android:layout_width="wrap_content"
-                android:layout_height="match_parent"
+                android:layout_height="0dp"
                 android:adjustViewBounds="true"
-                android:contentDescription="@string/wall_one_background"
-                android:scaleType="fitCenter"
-                android:src="@drawable/wall_one_background_bright"
+                android:contentDescription="@string/bookshelf"
+                android:scaleType="centerInside"
+                android:src="@drawable/bookshelf_bright"
                 app:layout_constraintBottom_toBottomOf="parent"
                 app:layout_constraintEnd_toEndOf="parent"
                 app:layout_constraintStart_toStartOf="parent"
                 app:layout_constraintTop_toTopOf="parent" />
 
             <androidx.constraintlayout.widget.Guideline
-                android:id="@+id/wallOneBottomGuideline"
+                android:id="@+id/upperBookshelfTopGuideline"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:orientation="horizontal"
-                app:layout_constraintGuide_percent="0.96" />
+                app:layout_constraintGuide_percent="0.2" />
 
             <androidx.constraintlayout.widget.Guideline
-                android:id="@+id/wallOneTopGuideline"
+                android:id="@+id/upperBookshelfBottomGuideline"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:orientation="horizontal"
-                app:layout_constraintGuide_percent="0.07" />
+                app:layout_constraintGuide_percent="0.435" />
 
-            <androidx.constraintlayout.widget.ConstraintLayout
-                android:id="@+id/bookshelfConstraintLayout"
+            <androidx.constraintlayout.widget.Guideline
+                android:id="@+id/upperBookshelfStartGuideline"
                 android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:orientation="vertical"
+                app:layout_constraintGuide_percent="0.125" />
+
+            <androidx.constraintlayout.widget.Guideline
+                android:id="@+id/upperBookshelfEndGuideline"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:orientation="vertical"
+                app:layout_constraintGuide_percent="0.86" />
+
+            <ImageButton
+                android:id="@+id/upperBookshelfImageButton"
+                android:layout_width="0dp"
                 android:layout_height="0dp"
-                app:layout_constraintBottom_toBottomOf="@id/wallOneBottomGuideline"
-                app:layout_constraintEnd_toEndOf="parent"
-                app:layout_constraintStart_toStartOf="parent"
-                app:layout_constraintTop_toTopOf="@id/wallOneTopGuideline">
-
-                <ImageView
-                    android:id="@+id/bookshelfImageView"
-                    android:layout_width="wrap_content"
-                    android:layout_height="0dp"
-                    android:adjustViewBounds="true"
-                    android:contentDescription="@string/bookshelf"
-                    android:scaleType="centerInside"
-                    android:src="@drawable/bookshelf_bright"
-                    app:layout_constraintBottom_toBottomOf="parent"
-                    app:layout_constraintEnd_toEndOf="parent"
-                    app:layout_constraintStart_toStartOf="parent"
-                    app:layout_constraintTop_toTopOf="parent" />
-
-                <androidx.constraintlayout.widget.Guideline
-                    android:id="@+id/upperBookshelfTopGuideline"
-                    android:layout_width="wrap_content"
-                    android:layout_height="wrap_content"
-                    android:orientation="horizontal"
-                    app:layout_constraintGuide_percent="0.2" />
-
-                <androidx.constraintlayout.widget.Guideline
-                    android:id="@+id/upperBookshelfBottomGuideline"
-                    android:layout_width="wrap_content"
-                    android:layout_height="wrap_content"
-                    android:orientation="horizontal"
-                    app:layout_constraintGuide_percent="0.435" />
-
-                <androidx.constraintlayout.widget.Guideline
-                    android:id="@+id/upperBookshelfStartGuideline"
-                    android:layout_width="wrap_content"
-                    android:layout_height="wrap_content"
-                    android:orientation="vertical"
-                    app:layout_constraintGuide_percent="0.125" />
-
-                <androidx.constraintlayout.widget.Guideline
-                    android:id="@+id/upperBookshelfEndGuideline"
-                    android:layout_width="wrap_content"
-                    android:layout_height="wrap_content"
-                    android:orientation="vertical"
-                    app:layout_constraintGuide_percent="0.86" />
-
-                <ImageButton
-                    android:id="@+id/upperBookshelfImageButton"
-                    android:layout_width="0dp"
-                    android:layout_height="0dp"
-                    android:background="@color/transparency"
-                    android:contentDescription="@string/upper_bookshelf"
-                    app:layout_constraintBottom_toBottomOf="@id/upperBookshelfBottomGuideline"
-                    app:layout_constraintEnd_toEndOf="@id/upperBookshelfEndGuideline"
-                    app:layout_constraintStart_toStartOf="@id/upperBookshelfStartGuideline"
-                    app:layout_constraintTop_toTopOf="@id/upperBookshelfTopGuideline" />
-            </androidx.constraintlayout.widget.ConstraintLayout>
-
-
-            <ImageButton
-                android:id="@+id/storageClosetImageButton"
-                android:layout_width="wrap_content"
-                android:layout_height="96dp"
-                android:layout_marginEnd="8dp"
-                android:adjustViewBounds="true"
                 android:background="@color/transparency"
-                android:contentDescription="@string/storage_closet"
-                android:scaleType="centerInside"
-                android:src="@drawable/storage_closet_closed_bright"
-                app:layout_constraintBottom_toTopOf="@id/wallOneBottomGuideline"
-                app:layout_constraintEnd_toStartOf="@id/bookshelfConstraintLayout" />
-
-            <ImageButton
-                android:id="@+id/radioTableImageButton"
-                android:layout_width="wrap_content"
-                android:layout_height="112dp"
-                android:layout_marginStart="8dp"
-                android:adjustViewBounds="true"
-                android:background="@color/transparency"
-                android:contentDescription="@string/radio_table"
-                android:scaleType="centerInside"
-                android:src="@drawable/radio_table_bright"
-                app:layout_constraintBottom_toTopOf="@id/wallOneBottomGuideline"
-                app:layout_constraintStart_toEndOf="@id/bookshelfConstraintLayout" />
-
-            <androidx.constraintlayout.widget.Guideline
-                android:id="@+id/wallOneFinancialStatementsTopGuideline"
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
-                android:orientation="horizontal"
-                app:layout_constraintGuide_percent="0.33" />
-
-            <androidx.constraintlayout.widget.Guideline
-                android:id="@+id/wallOneFinancialStatementsBottomGuideline"
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
-                android:orientation="horizontal"
-                app:layout_constraintGuide_percent="0.60" />
-
-            <ImageButton
-                android:id="@+id/financialStatementsImageButton"
-                android:layout_width="wrap_content"
-                android:layout_height="0dp"
-                android:layout_marginStart="8dp"
-                android:adjustViewBounds="true"
-                android:background="@color/transparency"
-                android:contentDescription="@string/financial_statements"
-                android:scaleType="centerInside"
-                android:src="@drawable/financial_statements_bright"
-                app:layout_constraintBottom_toBottomOf="@id/wallOneFinancialStatementsBottomGuideline"
-                app:layout_constraintStart_toEndOf="@id/bookshelfConstraintLayout"
-                app:layout_constraintTop_toTopOf="@id/wallOneFinancialStatementsTopGuideline" />
+                android:contentDescription="@string/upper_bookshelf"
+                app:layout_constraintBottom_toBottomOf="@id/upperBookshelfBottomGuideline"
+                app:layout_constraintEnd_toEndOf="@id/upperBookshelfEndGuideline"
+                app:layout_constraintStart_toStartOf="@id/upperBookshelfStartGuideline"
+                app:layout_constraintTop_toTopOf="@id/upperBookshelfTopGuideline" />
         </androidx.constraintlayout.widget.ConstraintLayout>
-    </HorizontalScrollView>
 
-    <ImageView
-        android:id="@+id/wallOneSlightlyDimImageView"
-        android:layout_width="match_parent"
-        android:layout_height="match_parent"
-        android:contentDescription="@string/slightly_dim_room"
-        android:src="@color/slightly_dim"
-        android:visibility="gone" />
 
-    <ImageView
-        android:id="@+id/wallOneTooDimImageView"
-        android:layout_width="match_parent"
-        android:layout_height="match_parent"
-        android:contentDescription="@string/too_dim_room"
-        android:src="@color/too_dim"
-        android:visibility="gone" />
+        <ImageButton
+            android:id="@+id/storageClosetImageButton"
+            android:layout_width="wrap_content"
+            android:layout_height="96dp"
+            android:layout_marginEnd="8dp"
+            android:adjustViewBounds="true"
+            android:background="@color/transparency"
+            android:contentDescription="@string/storage_closet"
+            android:scaleType="centerInside"
+            android:src="@drawable/storage_closet_closed_bright"
+            app:layout_constraintBottom_toTopOf="@id/wallOneBottomGuideline"
+            app:layout_constraintEnd_toStartOf="@id/bookshelfConstraintLayout" />
 
-</FrameLayout>
+        <ImageButton
+            android:id="@+id/radioTableImageButton"
+            android:layout_width="wrap_content"
+            android:layout_height="112dp"
+            android:layout_marginStart="8dp"
+            android:adjustViewBounds="true"
+            android:background="@color/transparency"
+            android:contentDescription="@string/radio_table"
+            android:scaleType="centerInside"
+            android:src="@drawable/radio_table_bright"
+            app:layout_constraintBottom_toTopOf="@id/wallOneBottomGuideline"
+            app:layout_constraintStart_toEndOf="@id/bookshelfConstraintLayout" />
+
+        <androidx.constraintlayout.widget.Guideline
+            android:id="@+id/wallOneFinancialStatementsTopGuideline"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal"
+            app:layout_constraintGuide_percent="0.33" />
+
+        <androidx.constraintlayout.widget.Guideline
+            android:id="@+id/wallOneFinancialStatementsBottomGuideline"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal"
+            app:layout_constraintGuide_percent="0.60" />
+
+        <ImageButton
+            android:id="@+id/financialStatementsImageButton"
+            android:layout_width="wrap_content"
+            android:layout_height="0dp"
+            android:layout_marginStart="8dp"
+            android:adjustViewBounds="true"
+            android:background="@color/transparency"
+            android:contentDescription="@string/financial_statements"
+            android:scaleType="centerInside"
+            android:src="@drawable/financial_statements_bright"
+            app:layout_constraintBottom_toBottomOf="@id/wallOneFinancialStatementsBottomGuideline"
+            app:layout_constraintStart_toEndOf="@id/bookshelfConstraintLayout"
+            app:layout_constraintTop_toTopOf="@id/wallOneFinancialStatementsTopGuideline" />
+
+        <ImageView
+            android:id="@+id/wallOneSlightlyDimImageView"
+            android:layout_width="0dp"
+            android:layout_height="0dp"
+            android:contentDescription="@string/slightly_dim_room"
+            android:src="@color/slightly_dim"
+            android:visibility="gone"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent" />
+
+        <ImageView
+            android:id="@+id/wallOneTooDimImageView"
+            android:layout_width="0dp"
+            android:layout_height="0dp"
+            android:contentDescription="@string/too_dim_room"
+            android:src="@color/too_dim"
+            android:visibility="gone"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent" />
+
+        <androidx.constraintlayout.widget.Guideline
+            android:id="@+id/bookImportantHintTopGuideline"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal"
+            app:layout_constraintGuide_percent="0.294" />
+
+        <androidx.constraintlayout.widget.Guideline
+            android:id="@+id/bookImportantHintBottomGuideline"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal"
+            app:layout_constraintGuide_percent="0.345" />
+
+        <androidx.constraintlayout.widget.Guideline
+            android:id="@+id/bookImportantHintStartGuideline"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:orientation="vertical"
+            app:layout_constraintGuide_percent="0.446" />
+
+        <androidx.constraintlayout.widget.Guideline
+            android:id="@+id/bookImportantHintEndGuideline"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:orientation="vertical"
+            app:layout_constraintGuide_percent="0.456" />
+
+        <ImageView
+            android:id="@+id/bookImportantHintImageView"
+            android:layout_width="0dp"
+            android:layout_height="0dp"
+            android:contentDescription="@string/book_important_hint"
+            android:src="@drawable/book_important_hint"
+            android:adjustViewBounds="true"
+            android:visibility="invisible"
+            app:layout_constraintBottom_toBottomOf="@id/bookImportantHintBottomGuideline"
+            app:layout_constraintEnd_toEndOf="@id/bookImportantHintEndGuideline"
+            app:layout_constraintStart_toStartOf="@id/bookImportantHintStartGuideline"
+            app:layout_constraintTop_toTopOf="@id/bookImportantHintTopGuideline" />
+    </androidx.constraintlayout.widget.ConstraintLayout>
+</HorizontalScrollView>
