@@ -161,6 +161,10 @@ class FirstRoomGameActivity : BaseGameActivity() {
                 if (IPAD.isSelected) {
                     Log.d(TAG, "open IpadFragment")
 
+                    IPAD.isSelected = false
+
+                    inactivateSlotButtonUI()
+
                     openFragment(IpadFragment.newInstance())
                 }
             }
@@ -237,7 +241,7 @@ class FirstRoomGameActivity : BaseGameActivity() {
     }
 
     private fun hasItem(slot: Slot, item: GameItem): Boolean {
-        return  if (slot.slotNumber < ynrViewModel.inventoryItems.size) {
+        return if (slot.slotNumber < ynrViewModel.inventoryItems.size) {
             ynrViewModel.inventoryItems[slot.slotNumber] == item
         } else {
             false
@@ -249,18 +253,31 @@ class FirstRoomGameActivity : BaseGameActivity() {
     }
 
     private fun putItemIntoInventory(item: GameItem) {
-        if (item.drawableResId != null) {
-            val slotNumber = ynrViewModel.inventoryItems.size
-            if (slotNumber < YNRViewModel.MAX_INVENTORY_SIZE) {
+        if (item.isInventoryItem && item.drawableResId != null) {
+            val filledSlotsSize = ynrViewModel.inventoryItems.filterNotNull().size
+            if (filledSlotsSize < YNRViewModel.MAX_INVENTORY_SIZE) {
+                val slotNumber = ynrViewModel.inventoryItems.indexOfFirst { it == null }
                 val slot = chooseSlotToFill(slotNumber)
                 slot.slotImageView.setImageResource(item.drawableResId)
 
-                ynrViewModel.inventoryItems.add(item)
+                ynrViewModel.inventoryItems[slotNumber] = item
             } else {
                 Log.e(TAG, "slot is FULL!!!")
             }
         } else {
             Log.e(TAG, "this is the item which has NO drawableResId!!!")
+        }
+    }
+
+    private fun removeItemFromInventory(item: GameItem) {
+        if (ynrViewModel.inventoryItems.contains(item)) {
+            val slotNumber = ynrViewModel.inventoryItems.indexOf(item)
+            val slot = slots[slotNumber]
+            slot.slotImageView.setImageResource(R.color.transparency)
+
+            ynrViewModel.inventoryItems[slotNumber] = null
+        } else {
+            Log.e(TAG, "there's NO such item in Inventory!!!")
         }
     }
 
