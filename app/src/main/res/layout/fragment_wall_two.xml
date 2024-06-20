@@ -1,81 +1,205 @@
 <?xml version="1.0" encoding="utf-8"?>
-<HorizontalScrollView xmlns:android="http://schemas.android.com/apk/res/android"
+<FrameLayout xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:app="http://schemas.android.com/apk/res-auto"
     android:layout_width="match_parent"
     android:layout_height="match_parent">
 
-    <androidx.constraintlayout.widget.ConstraintLayout
-        android:layout_width="wrap_content"
+    <HorizontalScrollView
+        android:layout_width="match_parent"
         android:layout_height="match_parent">
 
-        <ImageView
-            android:id="@+id/wallTwoBackgroundImageView"
+        <androidx.constraintlayout.widget.ConstraintLayout
             android:layout_width="wrap_content"
-            android:layout_height="match_parent"
-            app:layout_constraintTop_toTopOf="parent"
-            app:layout_constraintBottom_toBottomOf="parent"
-            app:layout_constraintStart_toStartOf="parent"
-            app:layout_constraintEnd_toEndOf="parent"
-            android:adjustViewBounds="true"
-            android:contentDescription="@string/wall_two_background"
-            android:scaleType="fitCenter"
-            android:src="@drawable/wall_two_background_bright" />
+            android:layout_height="match_parent">
 
-        <androidx.constraintlayout.widget.Guideline
-            android:id="@+id/wallTwoVaultTopGuideline"
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:orientation="horizontal"
-            app:layout_constraintGuide_percent="0.12" />
+            <ImageView
+                android:id="@+id/wallTwoBackgroundImageView"
+                android:layout_width="wrap_content"
+                android:layout_height="match_parent"
+                android:adjustViewBounds="true"
+                android:contentDescription="@string/wall_two_background"
+                android:scaleType="fitCenter"
+                android:src="@drawable/wall_two_background_bright"
+                app:layout_constraintBottom_toBottomOf="parent"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toTopOf="parent" />
 
-        <androidx.constraintlayout.widget.Guideline
-            android:id="@+id/wallTwoVaultBottomGuideline"
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:orientation="horizontal"
-            app:layout_constraintGuide_percent="0.96" />
+            <androidx.constraintlayout.widget.Guideline
+                android:id="@+id/wallTwoVaultTopGuideline"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:orientation="horizontal"
+                app:layout_constraintGuide_percent="0.12" />
 
-        <ImageButton
-            android:id="@+id/vaultImageButton"
-            android:layout_width="wrap_content"
-            android:layout_height="0dp"
-            app:layout_constraintStart_toStartOf="parent"
-            app:layout_constraintEnd_toEndOf="parent"
-            app:layout_constraintTop_toTopOf="@id/wallTwoVaultTopGuideline"
-            app:layout_constraintBottom_toBottomOf="@id/wallTwoVaultBottomGuideline"
-            android:src="@drawable/vault_0_solved_bright"
-            android:scaleType="centerInside"
-            android:adjustViewBounds="true"
-            android:background="@color/transparency"
-            android:contentDescription="@string/vault" />
+            <androidx.constraintlayout.widget.Guideline
+                android:id="@+id/wallTwoVaultBottomGuideline"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:orientation="horizontal"
+                app:layout_constraintGuide_percent="0.96" />
 
-        <androidx.constraintlayout.widget.Guideline
-            android:id="@+id/wallTwoFiguresFrameTopGuideline"
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:orientation="horizontal"
-            app:layout_constraintGuide_percent="0.32" />
+            <ImageButton
+                android:id="@+id/vaultImageButton"
+                android:layout_width="wrap_content"
+                android:layout_height="0dp"
+                android:adjustViewBounds="true"
+                android:background="@color/transparency"
+                android:contentDescription="@string/vault"
+                android:scaleType="centerInside"
+                android:src="@drawable/vault_0_solved_bright"
+                app:layout_constraintBottom_toBottomOf="@id/wallTwoVaultBottomGuideline"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toTopOf="@id/wallTwoVaultTopGuideline" />
 
-        <androidx.constraintlayout.widget.Guideline
-            android:id="@+id/wallTwoFiguresFrameBottomGuideline"
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:orientation="horizontal"
-            app:layout_constraintGuide_percent="0.80" />
+            <androidx.constraintlayout.widget.Guideline
+                android:id="@+id/wallTwoFiguresFrameTopGuideline"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:orientation="horizontal"
+                app:layout_constraintGuide_percent="0.32" />
 
-        <ImageButton
-            android:id="@+id/figuresFrameImageButton"
-            android:layout_width="0dp"
-            android:layout_height="0dp"
-            app:layout_constraintStart_toEndOf="@id/vaultImageButton"
-            app:layout_constraintEnd_toEndOf="parent"
-            app:layout_constraintTop_toTopOf="@id/wallTwoFiguresFrameTopGuideline"
-            app:layout_constraintBottom_toBottomOf="@id/wallTwoFiguresFrameBottomGuideline"
-            android:src="@drawable/figures_frame_eyes_closed_bright"
-            android:scaleType="centerInside"
-            android:adjustViewBounds="true"
-            android:background="@color/transparency"
-            android:contentDescription="@string/vault" />
+            <androidx.constraintlayout.widget.Guideline
+                android:id="@+id/wallTwoFiguresFrameBottomGuideline"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:orientation="horizontal"
+                app:layout_constraintGuide_percent="0.80" />
 
-    </androidx.constraintlayout.widget.ConstraintLayout>
-</HorizontalScrollView>
+            <ImageButton
+                android:id="@+id/figuresFrameImageButton"
+                android:layout_width="0dp"
+                android:layout_height="0dp"
+                android:adjustViewBounds="true"
+                android:background="@color/transparency"
+                android:contentDescription="@string/figures_frame"
+                android:scaleType="centerInside"
+                android:src="@drawable/figures_frame_eyes_closed_bright"
+                app:layout_constraintBottom_toBottomOf="@id/wallTwoFiguresFrameBottomGuideline"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toEndOf="@id/vaultImageButton"
+                app:layout_constraintTop_toTopOf="@id/wallTwoFiguresFrameTopGuideline" />
+
+            <androidx.constraintlayout.widget.Guideline
+                android:id="@+id/wallTwoInvestmentBehaviorTestTopGuideline"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:orientation="horizontal"
+                app:layout_constraintGuide_percent="0.42" />
+
+            <androidx.constraintlayout.widget.Guideline
+                android:id="@+id/wallTwoInvestmentBehaviorTestBottomGuideline"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:orientation="horizontal"
+                app:layout_constraintGuide_percent="0.63" />
+
+            <androidx.constraintlayout.widget.Guideline
+                android:id="@+id/wallTwoInvestmentBehaviorTestStartGuideline"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:orientation="vertical"
+                app:layout_constraintGuide_percent="0.14" />
+
+            <androidx.constraintlayout.widget.Guideline
+                android:id="@+id/wallTwoInvestmentBehaviorTestEndGuideline"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:orientation="vertical"
+                app:layout_constraintGuide_percent="0.33" />
+
+            <ImageButton
+                android:id="@+id/investmentBehaviorTestImageButton"
+                android:layout_width="0dp"
+                android:layout_height="0dp"
+                android:background="@color/transparency"
+                android:contentDescription="@string/investment_behavior_test"
+                app:layout_constraintBottom_toBottomOf="@id/wallTwoInvestmentBehaviorTestBottomGuideline"
+                app:layout_constraintEnd_toEndOf="@id/wallTwoInvestmentBehaviorTestEndGuideline"
+                app:layout_constraintStart_toStartOf="@id/wallTwoInvestmentBehaviorTestStartGuideline"
+                app:layout_constraintTop_toTopOf="@id/wallTwoInvestmentBehaviorTestTopGuideline" />
+
+            <androidx.constraintlayout.widget.Guideline
+                android:id="@+id/wallTwoBullBearTopGuideline"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:orientation="horizontal"
+                app:layout_constraintGuide_percent="0.10" />
+
+            <androidx.constraintlayout.widget.Guideline
+                android:id="@+id/wallTwoBullBearBottomGuideline"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:orientation="horizontal"
+                app:layout_constraintGuide_percent="0.37" />
+
+            <androidx.constraintlayout.widget.Guideline
+                android:id="@+id/wallTwoBullStartGuideline"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:orientation="vertical"
+                app:layout_constraintGuide_percent="0.15" />
+
+            <androidx.constraintlayout.widget.Guideline
+                android:id="@+id/wallTwoBullEndGuideline"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:orientation="vertical"
+                app:layout_constraintGuide_percent="0.33" />
+
+            <ImageButton
+                android:id="@+id/bullImageButton"
+                android:layout_width="0dp"
+                android:layout_height="0dp"
+                android:background="@color/transparency"
+                android:contentDescription="@string/bull"
+                app:layout_constraintBottom_toBottomOf="@id/wallTwoBullBearBottomGuideline"
+                app:layout_constraintEnd_toEndOf="@id/wallTwoBullEndGuideline"
+                app:layout_constraintStart_toStartOf="@id/wallTwoBullStartGuideline"
+                app:layout_constraintTop_toTopOf="@id/wallTwoBullBearTopGuideline" />
+
+            <androidx.constraintlayout.widget.Guideline
+                android:id="@+id/wallTwoBearStartGuideline"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:orientation="vertical"
+                app:layout_constraintGuide_percent="0.70" />
+
+            <androidx.constraintlayout.widget.Guideline
+                android:id="@+id/wallTwoBearEndGuideline"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:orientation="vertical"
+                app:layout_constraintGuide_percent="0.85" />
+
+            <ImageButton
+                android:id="@+id/bearImageButton"
+                android:layout_width="0dp"
+                android:layout_height="0dp"
+                android:background="@color/transparency"
+                android:contentDescription="@string/bear"
+                app:layout_constraintBottom_toBottomOf="@id/wallTwoBullBearBottomGuideline"
+                app:layout_constraintEnd_toEndOf="@id/wallTwoBearEndGuideline"
+                app:layout_constraintStart_toStartOf="@id/wallTwoBearStartGuideline"
+                app:layout_constraintTop_toTopOf="@id/wallTwoBullBearTopGuideline" />
+
+        </androidx.constraintlayout.widget.ConstraintLayout>
+    </HorizontalScrollView>
+
+    <ImageView
+        android:id="@+id/wallTwoSlightlyDimImageView"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:contentDescription="@string/slightly_dim_room"
+        android:src="@color/slightly_dim"
+        android:visibility="gone" />
+
+    <ImageView
+        android:id="@+id/wallTwoTooDimImageView"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:contentDescription="@string/too_dim_room"
+        android:src="@color/too_dim"
+        android:visibility="gone" />
+</FrameLayout>
