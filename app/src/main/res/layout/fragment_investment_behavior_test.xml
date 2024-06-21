@@ -8,58 +8,186 @@
     tools:context=".InvestmentBehaviorTestFragment">
 
     <androidx.constraintlayout.widget.ConstraintLayout
-        android:layout_width="0dp"
+        android:id="@+id/investmentBehaviorTestContentConstraintLayout"
+        android:layout_width="wrap_content"
         android:layout_height="0dp"
-        app:layout_constraintHeight_percent="0.95"
-        app:layout_constraintWidth_percent="0.9"
-        app:layout_constraintTop_toTopOf="parent"
         app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHeight_percent="0.95"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintEnd_toEndOf="parent">
+        app:layout_constraintTop_toTopOf="parent">
+
         <ImageView
             android:id="@+id/bulletinBoardImageView"
             android:layout_width="0dp"
             android:layout_height="0dp"
+            android:contentDescription="@string/bulletin_board"
             android:src="@drawable/bulletin_board"
-            app:layout_constraintStart_toStartOf="parent"
-            app:layout_constraintEnd_toEndOf="parent"
-            app:layout_constraintTop_toTopOf="parent"
             app:layout_constraintBottom_toBottomOf="parent"
-            android:contentDescription="@string/bulletin_board" />
+            app:layout_constraintEnd_toEndOf="@id/investmentBehaviorTestCoverConstraintLayout"
+            app:layout_constraintStart_toStartOf="@id/investmentBehaviorTestCoverConstraintLayout"
+            app:layout_constraintTop_toTopOf="parent" />
 
         <androidx.constraintlayout.widget.Guideline
-            android:id="@+id/investmentBehaviorTestCardStackViewEndGuideline"
+            android:id="@+id/bulletinBoardContentStartGuideline"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:orientation="vertical"
-            app:layout_constraintGuide_percent="0.5" />
+            app:layout_constraintGuide_percent="0.038" />
 
-        <com.yuyakaido.android.cardstackview.CardStackView
-            android:id="@+id/investmentBehaviorTestCardStackView"
+        <androidx.constraintlayout.widget.Guideline
+            android:id="@+id/bulletinBoardContentEndGuideline"
             android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:orientation="vertical"
+            app:layout_constraintGuide_percent="0.96" />
+
+        <androidx.constraintlayout.widget.Guideline
+            android:id="@+id/bulletinBoardContentTopGuideline"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal"
+            app:layout_constraintGuide_percent="0.07" />
+
+        <androidx.constraintlayout.widget.Guideline
+            android:id="@+id/bulletinBoardContentBottomGuideline"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal"
+            app:layout_constraintGuide_percent="0.925" />
+
+        <androidx.constraintlayout.widget.ConstraintLayout
+            android:id="@+id/bulletinBoardContentConstraintLayout"
+            android:layout_width="0dp"
             android:layout_height="0dp"
-            app:layout_constraintBottom_toBottomOf="parent"
-            app:layout_constraintEnd_toEndOf="@id/investmentBehaviorTestCardStackViewEndGuideline"
-            app:layout_constraintHorizontal_bias="0.52"
-            app:layout_constraintHeight_percent="0.80"
-            app:layout_constraintStart_toStartOf="parent"
-            app:layout_constraintTop_toTopOf="parent" />
+            app:layout_constraintBottom_toBottomOf="@id/bulletinBoardContentBottomGuideline"
+            app:layout_constraintEnd_toEndOf="@id/bulletinBoardContentEndGuideline"
+            app:layout_constraintStart_toStartOf="@id/bulletinBoardContentStartGuideline"
+            app:layout_constraintTop_toTopOf="@id/bulletinBoardContentTopGuideline">
+
+            <androidx.constraintlayout.widget.Guideline
+                android:id="@+id/bulletinBoardContentMiddleGuideline"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:orientation="vertical"
+                app:layout_constraintGuide_percent="0.545" />
+
+            <androidx.constraintlayout.widget.ConstraintLayout
+                android:layout_width="0dp"
+                android:layout_height="match_parent"
+                app:layout_constraintEnd_toStartOf="@id/bulletinBoardContentMiddleGuideline"
+                app:layout_constraintStart_toStartOf="parent">
+
+                <com.yuyakaido.android.cardstackview.CardStackView
+                    android:id="@+id/investmentBehaviorTestCardStackView"
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent" />
+            </androidx.constraintlayout.widget.ConstraintLayout>
+
+            <LinearLayout
+                android:id="@+id/investmentBehaviorTestAnswersLinearLayout"
+                android:layout_width="0dp"
+                android:layout_height="0dp"
+                android:gravity="center"
+                android:orientation="vertical"
+                app:layout_constraintBottom_toBottomOf="parent"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toStartOf="@id/bulletinBoardContentMiddleGuideline"
+                app:layout_constraintTop_toTopOf="parent" />
+
+            <LinearLayout
+                android:id="@+id/loadingInvestmentBehaviorTestResultLinearLayout"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:gravity="center"
+                android:orientation="vertical"
+                android:visibility="gone"
+                app:layout_constraintBottom_toBottomOf="parent"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toTopOf="parent">
+
+                <ImageView
+                    android:id="@+id/loadingInvestmentBehaviorTestResultImageView"
+                    android:layout_width="90dp"
+                    android:layout_height="90dp"
+                    android:layout_marginBottom="4dp"
+                    android:contentDescription="@string/loading_investment_behavior_test_result" />
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:fontFamily="@font/gowunbatang_bold"
+                    android:gravity="center"
+                    android:text="@string/loading_investment_behavior_test_result"
+                    android:textSize="18sp" />
+            </LinearLayout>
+
+            <androidx.constraintlayout.widget.ConstraintLayout
+                android:id="@+id/investmentBehaviorTestResultConstraintLayout"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:visibility="gone">
+
+                <ImageView
+                    android:id="@+id/investmentBehaviorTestResultImageView"
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:contentDescription="@string/investment_behavior_test_result"
+                    app:layout_constraintBottom_toBottomOf="parent"
+                    app:layout_constraintStart_toStartOf="parent"
+                    app:layout_constraintTop_toTopOf="parent"
+                    app:layout_constraintWidth_percent="0.44" />
+
+                <LinearLayout
+                    android:layout_width="0dp"
+                    android:layout_height="match_parent"
+                    android:gravity="center_vertical"
+                    android:orientation="vertical"
+                    app:layout_constraintEnd_toEndOf="parent"
+                    app:layout_constraintWidth_percent="0.52">
+
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:fontFamily="@font/gowunbatang_bold"
+                        android:text="@string/your_investment_behavior_test_result_is"
+                        android:textSize="15sp" />
+
+                    <TextView
+                        android:id="@+id/investmentBehaviorTestResultTitleTextView"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:fontFamily="@font/gowunbatang_bold"
+                        android:textColor="@color/yellow_book"
+                        android:textSize="42sp" />
+
+                    <TextView
+                        android:id="@+id/investmentBehaviorTestResultContentTextView"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_marginTop="12dp"
+                        android:layout_marginEnd="16dp"
+                        android:fontFamily="@font/gowunbatang_bold"
+                        android:textSize="17sp" />
+                </LinearLayout>
+            </androidx.constraintlayout.widget.ConstraintLayout>
+        </androidx.constraintlayout.widget.ConstraintLayout>
 
         <androidx.constraintlayout.widget.ConstraintLayout
             android:id="@+id/investmentBehaviorTestCoverConstraintLayout"
             android:layout_width="wrap_content"
             android:layout_height="0dp"
+            android:visibility="visible"
             app:layout_constraintBottom_toBottomOf="parent"
             app:layout_constraintEnd_toEndOf="parent"
-            app:layout_constraintHeight_percent="0.80"
             app:layout_constraintStart_toStartOf="parent"
-            app:layout_constraintTop_toTopOf="parent"
-            android:visibility="invisible">
+            app:layout_constraintTop_toTopOf="parent">
 
             <ImageView
                 android:id="@+id/investmentBehaviorTestCoverBackgroundImageView"
                 android:layout_width="wrap_content"
-                android:layout_height="0dp"
+                android:layout_height="match_parent"
                 android:adjustViewBounds="true"
                 android:importantForAccessibility="no"
                 android:src="@drawable/investment_behavior_test_cover_background"
@@ -92,8 +220,8 @@
                 android:scaleType="centerInside"
                 android:src="@drawable/investment_behavior_test_start_button"
                 app:layout_constraintBottom_toBottomOf="@id/investmentBehaviorTestStartBottomGuideline"
-                app:layout_constraintEnd_toEndOf="@id/investmentBehaviorTestCoverBackgroundImageView"
-                app:layout_constraintStart_toStartOf="@id/investmentBehaviorTestCoverBackgroundImageView"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toStartOf="parent"
                 app:layout_constraintTop_toTopOf="@id/investmentBehaviorTestStartTopGuideline" />
         </androidx.constraintlayout.widget.ConstraintLayout>
     </androidx.constraintlayout.widget.ConstraintLayout>

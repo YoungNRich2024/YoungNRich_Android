@@ -54,4 +54,11 @@ dependencies {
     implementation("com.pierfrancescosoffritti.androidyoutubeplayer:core:12.1.0")   // for 유튜브 영상
 
     implementation(libs.core.splashscreen)
+
+    // Glide v4 for animated GIF
+    implementation("com.github.bumptech.glide:glide:4.14.2")
+    annotationProcessor("com.github.bumptech.glide:compiler:4.14.2")
+
+    // Swipeable Card View for Android
+    implementation("com.yuyakaido.android:card-stack-view:2.3.4")
 }
