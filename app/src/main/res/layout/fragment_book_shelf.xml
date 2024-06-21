@@ -1,0 +1,217 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@drawable/zoomed_background"
+    android:clickable="true"
+    android:focusable="true"
+    tools:context=".BookShelfFragment">
+
+    <androidx.constraintlayout.widget.ConstraintLayout
+        android:layout_width="wrap_content"
+        android:layout_height="0dp"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent">
+
+        <ImageView
+            android:id="@+id/zoomedBookShelfImageView"
+            android:layout_width="wrap_content"
+            android:layout_height="0dp"
+            android:adjustViewBounds="true"
+            android:contentDescription="@string/zoomed_bookshelf"
+            android:src="@drawable/zoomed_bookshelf_bright"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent" />
+
+        <androidx.constraintlayout.widget.Guideline
+            android:id="@+id/upperBooksTopGuideline"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal"
+            app:layout_constraintGuide_percent="0.20" />
+
+        <androidx.constraintlayout.widget.Guideline
+            android:id="@+id/upperBooksBottomGuideline"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal"
+            app:layout_constraintGuide_percent="0.51" />
+
+        <androidx.constraintlayout.widget.Guideline
+            android:id="@+id/blueBookStartGuideline"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:orientation="vertical"
+            app:layout_constraintGuide_percent="0.029" />
+
+        <androidx.constraintlayout.widget.Guideline
+            android:id="@+id/blueBookEndGuideline"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:orientation="vertical"
+            app:layout_constraintGuide_percent="0.092" />
+
+        <androidx.constraintlayout.widget.Guideline
+            android:id="@+id/greenBookStartGuideline"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:orientation="vertical"
+            app:layout_constraintGuide_percent="0.144" />
+
+        <androidx.constraintlayout.widget.Guideline
+            android:id="@+id/greenBookEndGuideline"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:orientation="vertical"
+            app:layout_constraintGuide_percent="0.21" />
+
+        <androidx.constraintlayout.widget.Guideline
+            android:id="@+id/q4BookStartGuideline"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:orientation="vertical"
+            app:layout_constraintGuide_percent="0.274" />
+
+        <androidx.constraintlayout.widget.Guideline
+            android:id="@+id/q4BookEndGuideline"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:orientation="vertical"
+            app:layout_constraintGuide_percent="0.344" />
+
+        <androidx.constraintlayout.widget.Guideline
+            android:id="@+id/redBookStartGuideline"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:orientation="vertical"
+            app:layout_constraintGuide_percent="0.802" />
+
+        <androidx.constraintlayout.widget.Guideline
+            android:id="@+id/redBookEndGuideline"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:orientation="vertical"
+            app:layout_constraintGuide_percent="0.876" />
+
+        <ImageButton
+            android:id="@+id/blueBookImageButton"
+            android:layout_width="0dp"
+            android:layout_height="0dp"
+            android:background="@color/transparency"
+            android:contentDescription="@string/blue_book"
+            app:layout_constraintBottom_toBottomOf="@id/upperBooksBottomGuideline"
+            app:layout_constraintEnd_toEndOf="@id/blueBookEndGuideline"
+            app:layout_constraintStart_toStartOf="@id/blueBookStartGuideline"
+            app:layout_constraintTop_toTopOf="@id/upperBooksTopGuideline" />
+
+        <ImageButton
+            android:id="@+id/greenBookImageButton"
+            android:layout_width="0dp"
+            android:layout_height="0dp"
+            android:background="@color/transparency"
+            android:contentDescription="@string/green_book"
+            app:layout_constraintBottom_toBottomOf="@id/upperBooksBottomGuideline"
+            app:layout_constraintEnd_toEndOf="@id/greenBookEndGuideline"
+            app:layout_constraintStart_toStartOf="@id/greenBookStartGuideline"
+            app:layout_constraintTop_toTopOf="@id/upperBooksTopGuideline" />
+
+        <ImageButton
+            android:id="@+id/q4BookImageButton"
+            android:layout_width="0dp"
+            android:layout_height="0dp"
+            android:background="@color/transparency"
+            android:contentDescription="@string/blue_book"
+            app:layout_constraintBottom_toBottomOf="@id/upperBooksBottomGuideline"
+            app:layout_constraintEnd_toEndOf="@id/q4BookEndGuideline"
+            app:layout_constraintStart_toStartOf="@id/q4BookStartGuideline"
+            app:layout_constraintTop_toTopOf="@id/upperBooksTopGuideline" />
+
+        <ImageButton
+            android:id="@+id/redBookImageButton"
+            android:layout_width="0dp"
+            android:layout_height="0dp"
+            android:background="@color/transparency"
+            android:contentDescription="@string/red_book"
+            app:layout_constraintBottom_toBottomOf="@id/upperBooksBottomGuideline"
+            app:layout_constraintEnd_toEndOf="@id/redBookEndGuideline"
+            app:layout_constraintStart_toStartOf="@id/redBookStartGuideline"
+            app:layout_constraintTop_toTopOf="@id/upperBooksTopGuideline" />
+
+        <androidx.constraintlayout.widget.Guideline
+            android:id="@+id/lowerBooksTopGuideline"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal"
+            app:layout_constraintGuide_percent="0.64" />
+
+        <androidx.constraintlayout.widget.Guideline
+            android:id="@+id/lowerBooksBottomGuideline"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal"
+            app:layout_constraintGuide_percent="0.90" />
+
+        <androidx.constraintlayout.widget.Guideline
+            android:id="@+id/brownBookStartGuideline"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:orientation="vertical"
+            app:layout_constraintGuide_percent="0.320" />
+
+        <androidx.constraintlayout.widget.Guideline
+            android:id="@+id/brownBookEndGuideline"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:orientation="vertical"
+            app:layout_constraintGuide_percent="0.376" />
+
+        <androidx.constraintlayout.widget.Guideline
+            android:id="@+id/yellowBookStartGuideline"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:orientation="vertical"
+            app:layout_constraintGuide_percent="0.785" />
+
+        <androidx.constraintlayout.widget.Guideline
+            android:id="@+id/yellowBookEndGuideline"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:orientation="vertical"
+            app:layout_constraintGuide_percent="0.842" />
+
+        <ImageButton
+            android:id="@+id/brownBookImageButton"
+            android:layout_width="0dp"
+            android:layout_height="0dp"
+            android:background="@color/transparency"
+            android:contentDescription="@string/brown_book"
+            app:layout_constraintBottom_toBottomOf="@id/lowerBooksBottomGuideline"
+            app:layout_constraintEnd_toEndOf="@id/brownBookEndGuideline"
+            app:layout_constraintStart_toStartOf="@id/brownBookStartGuideline"
+            app:layout_constraintTop_toTopOf="@id/lowerBooksTopGuideline" />
+
+        <ImageButton
+            android:id="@+id/yellowBookImageButton"
+            android:layout_width="0dp"
+            android:layout_height="0dp"
+            android:background="@color/transparency"
+            android:contentDescription="@string/yellow_book"
+            app:layout_constraintBottom_toBottomOf="@id/lowerBooksBottomGuideline"
+            app:layout_constraintEnd_toEndOf="@id/yellowBookEndGuideline"
+            app:layout_constraintStart_toStartOf="@id/yellowBookStartGuideline"
+            app:layout_constraintTop_toTopOf="@id/lowerBooksTopGuideline" />
+    </androidx.constraintlayout.widget.ConstraintLayout>
+
+    <include
+        android:id="@+id/bookshelfBaseNavigation"
+        layout="@layout/layout_base_navigation"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent" />
+
+</androidx.constraintlayout.widget.ConstraintLayout>
