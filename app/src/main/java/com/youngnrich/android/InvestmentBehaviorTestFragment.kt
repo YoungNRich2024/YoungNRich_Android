@@ -87,7 +87,6 @@ class InvestmentBehaviorTestFragment : Fragment(), CardStackListener {
                 }
             }
 
-            Log.d(TAG, "${sharedSecondRoomGameViewModel.isInvestmentBehaviorTestComplete}")
             if (!sharedSecondRoomGameViewModel.isInvestmentBehaviorTestComplete) {
 
                 cardStackView = binding.investmentBehaviorTestCardStackView
@@ -229,7 +228,7 @@ class InvestmentBehaviorTestFragment : Fragment(), CardStackListener {
                                 investmentBehaviorTestResult = investmentBehaviorTestViewModel.getInvestmentBehaviorTestResult()
 
                                 isInvestmentBehaviorTestComplete = true
-                                Log.d(TAG, "Investment Behavior Test is COMPLETE?: ${sharedSecondRoomGameViewModel.isInvestmentBehaviorTestComplete}")
+                                Log.d(TAG, "Investment Behavior Test is COMPLETE?: $isInvestmentBehaviorTestComplete")
 
                                 investmentBehaviorTestCompleteTiming = true
                             }

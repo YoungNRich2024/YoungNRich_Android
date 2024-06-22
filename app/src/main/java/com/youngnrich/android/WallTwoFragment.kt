@@ -40,6 +40,13 @@ class WallTwoFragment : Fragment() {
     override fun onViewCreated(view: View, savedInstanceState: Bundle?) {
         super.onViewCreated(view, savedInstanceState)
 
+        // 투자 성향 테스트를 완료했다면 액자 이미지를 '눈 뜬' 버전으로 교체하기
+        sharedSecondRoomGameViewModel.isInvestmentBehaviorTestCompleteLiveData.observe(viewLifecycleOwner) { isInvestmentBehaviorTestCompleteLiveData ->
+            if (isInvestmentBehaviorTestCompleteLiveData) {
+                binding.figuresFrameImageButton.setImageResource(R.drawable.figures_frame_eyes_open_bright)
+            }
+        }
+
         binding.apply {
             vaultImageButton.setOnClickListener {
                 Log.d(TAG, "Vault is CLICKED!!!")
@@ -67,8 +74,6 @@ class WallTwoFragment : Fragment() {
 
                 // 클릭하면 투자 성향 테스트 fragment 띄우기
                 secondRoomGameActivity.openFragment(InvestmentBehaviorTestFragment.newInstance())
-
-                // TODO: 투자 성향 테스트를 완료했다면 액자 이미지를 '눈 뜬' 버전으로 교체하기
             }
         }
     }
