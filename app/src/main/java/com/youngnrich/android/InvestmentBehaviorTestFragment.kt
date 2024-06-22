@@ -41,6 +41,10 @@ class InvestmentBehaviorTestFragment : Fragment(), CardStackListener {
             "Cannot access binding because it is null. Is the view visible?"
         }
 
+    private val secondRoomGameActivity: SecondRoomGameActivity
+        get() = checkNotNull(activity as? SecondRoomGameActivity) {
+            "Cannot access secondRoomGameActivity because it is null."
+        }
     private val sharedSecondRoomGameViewModel: SecondRoomGameViewModel by activityViewModels()
 
     private val investmentBehaviorTestViewModel: InvestmentBehaviorTestViewModel by viewModels()
@@ -73,6 +77,13 @@ class InvestmentBehaviorTestFragment : Fragment(), CardStackListener {
 
                 baseArrowBottom.setOnClickListener {
                     requireActivity().supportFragmentManager.popBackStack()
+
+                    // 투자 성향 테스트를 완료하고 처음 InvestmentBehaviorTestFragment 나갔을 때만 나가자마자 "어디선가 시선이 느껴진다"는 듯한 다이얼로그 띄우기
+                    if (sharedSecondRoomGameViewModel.isInvestmentBehaviorTestComplete && sharedSecondRoomGameViewModel.investmentBehaviorTestCompleteTiming) {
+                        secondRoomGameActivity.showCommonDialog(GameItem.FIGURES_FRAME)
+
+                        sharedSecondRoomGameViewModel.investmentBehaviorTestCompleteTiming = false
+                    }
                 }
             }
 
@@ -214,11 +225,15 @@ class InvestmentBehaviorTestFragment : Fragment(), CardStackListener {
                         Handler(Looper.getMainLooper()).postDelayed({
                             bulletinBoardContentConstraintLayout.removeView(loadingInvestmentBehaviorTestResultLinearLayout)
 
-                            sharedSecondRoomGameViewModel.investmentBehaviorTestResult = investmentBehaviorTestViewModel.getInvestmentBehaviorTestResult()
-                            showInvestmentBehaviorTestResult()
+                            sharedSecondRoomGameViewModel.apply {
+                                investmentBehaviorTestResult = investmentBehaviorTestViewModel.getInvestmentBehaviorTestResult()
 
-                            sharedSecondRoomGameViewModel.isInvestmentBehaviorTestComplete = true
-                            Log.d(TAG, "${sharedSecondRoomGameViewModel.isInvestmentBehaviorTestComplete}")
+                                isInvestmentBehaviorTestComplete = true
+                                Log.d(TAG, "Investment Behavior Test is COMPLETE?: ${sharedSecondRoomGameViewModel.isInvestmentBehaviorTestComplete}")
+
+                                investmentBehaviorTestCompleteTiming = true
+                            }
+                            showInvestmentBehaviorTestResult()
                         }, 2000)
                     } else {
                         investmentBehaviorTestViewModel.currentQuestionIndex++
